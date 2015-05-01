@@ -2,6 +2,7 @@ var mapAsset : TextAsset;
 var blockPrefab : Transform;
 var pelletPrefab : Transform;
 var superPrefab : Transform;
+var intersectionPrefab: Transform;
 var terrain : Terrain;
 //http://www.tosos.com/PacManClone.zip
 function Awake () {
@@ -21,6 +22,9 @@ function Awake () {
                 Instantiate (pelletPrefab, v, Quaternion.identity);
             } else if (map[j][i] == "O") {
                 Instantiate (superPrefab, v, Quaternion.identity);
+            } else if (map[j][i] == "I") {
+            	Instantiate(intersectionPrefab, v, Quaternion.identity);
+            	Instantiate (pelletPrefab, v, Quaternion.identity);
             }
         }
     }

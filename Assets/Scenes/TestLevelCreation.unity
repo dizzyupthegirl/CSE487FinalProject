@@ -325,6 +325,7 @@ MonoBehaviour:
   blockPrefab: {fileID: 404880, guid: fe0114869feb14039b93f7f8bddf4f1c, type: 2}
   pelletPrefab: {fileID: 440126, guid: 0db6a0f5a15ba4f5193a2791bb0d2a9d, type: 2}
   superPrefab: {fileID: 455272, guid: acb4e21aa35a643c29b766134d31d07f, type: 2}
+  intersectionPrefab: {fileID: 489340, guid: 8eb728ca38bdd4d5d85aa9516942eab8, type: 2}
   terrain: {fileID: 1779354651}
 --- !u!4 &2016525060
 Transform:

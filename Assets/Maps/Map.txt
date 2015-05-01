@@ -2,7 +2,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XO..XXXXX.....XXX.........OX
 X.X.XXX...X.............XX.X
 X....X....X.............XX.X
-X....X.....................X
+X....X......II.............X
 X.X.......X     X....X.X...X
 X.XXXXX...X     X..........X
 X.........XXXXXXX..X....X..X
