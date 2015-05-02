@@ -5,6 +5,7 @@ public class CookieEater : MonoBehaviour {
 	//public GUIText scoreText;
 	public int smallCookieScore=20;
 	public int superCookieScore=100;
+	public AudioClip eatCookie;
 	int score=0;
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,7 @@ public class CookieEater : MonoBehaviour {
 		} else if (other.tag == "SuperCookie") {
 			score += superCookieScore;
 		}
+		AudioSource.PlayClipAtPoint(eatCookie, other.gameObject.transform.position);
 		Destroy (other.gameObject);
 	}
 

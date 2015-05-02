@@ -82,7 +82,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 44141895}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime_Joint03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 61698470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,8 +205,8 @@ MeshFilter:
 --- !u!1 &106644174
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 140370, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 106644175}
@@ -226,8 +226,8 @@ GameObject:
 --- !u!4 &106644175
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 440370, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 106644174}
   m_LocalRotation: {x: .608761489, y: 0, z: 0, w: .793353319}
   m_LocalPosition: {x: 3.19999981, y: 45, z: -18}
@@ -238,17 +238,17 @@ Transform:
 --- !u!81 &106644176
 AudioListener:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8100000, guid: 9d4133d5d30b644bd87802a347eaccbe,
+  m_PrefabParentObject: {fileID: 8140370, guid: 46b855094e2514df491e64a33e693ae3,
     type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 106644174}
   m_Enabled: 1
 --- !u!114 &106644177
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: 9d4133d5d30b644bd87802a347eaccbe,
+  m_PrefabParentObject: {fileID: 11440370, guid: 46b855094e2514df491e64a33e693ae3,
     type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 106644174}
   m_Enabled: 0
   m_EditorHideFlags: 0
@@ -265,25 +265,25 @@ MonoBehaviour:
 --- !u!124 &106644178
 Behaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 12400000, guid: 9d4133d5d30b644bd87802a347eaccbe,
+  m_PrefabParentObject: {fileID: 12440370, guid: 46b855094e2514df491e64a33e693ae3,
     type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 106644174}
   m_Enabled: 1
 --- !u!92 &106644179
 Behaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9200000, guid: 9d4133d5d30b644bd87802a347eaccbe,
+  m_PrefabParentObject: {fileID: 9240370, guid: 46b855094e2514df491e64a33e693ae3,
     type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 106644174}
   m_Enabled: 1
 --- !u!20 &106644180
 Camera:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2000000, guid: 9d4133d5d30b644bd87802a347eaccbe,
+  m_PrefabParentObject: {fileID: 2040370, guid: 46b855094e2514df491e64a33e693ae3,
     type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 106644174}
   m_Enabled: 1
   serializedVersion: 2
@@ -314,8 +314,9 @@ Camera:
 --- !u!114 &106644181
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 11440372, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 106644174}
   m_Enabled: 0
   m_EditorHideFlags: 0
@@ -336,7 +337,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 112592557}
   - 111: {fileID: 112592558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cha_Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,9 +386,10 @@ GameObject:
   - 136: {fileID: 170501880}
   - 23: {fileID: 170501879}
   - 114: {fileID: 170501878}
+  - 54: {fileID: 170501883}
   m_Layer: 0
   m_Name: SuperCookie
-  m_TagString: Untagged
+  m_TagString: SuperCookie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -460,6 +462,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!54 &170501883
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170501877}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &202868296
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +486,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 202868297}
   - 137: {fileID: 202868298}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ModelSlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -526,8 +543,8 @@ SkinnedMeshRenderer:
 --- !u!1 &250035521
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 140372, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 250035522}
@@ -541,8 +558,8 @@ GameObject:
 --- !u!4 &250035522
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 440372, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 250035521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
@@ -560,7 +577,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 277198361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime_Joint02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -588,7 +605,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 300170488}
   - 137: {fileID: 300170489}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ModelSlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +667,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 350764472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Green Slime Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,7 +797,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 397623170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime_Joint01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,7 +860,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 438916677}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime_Joint02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -870,7 +887,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 447564242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -890,6 +907,50 @@ Transform:
   - {fileID: 510477123}
   m_Father: {fileID: 1129927483}
   m_RootOrder: 1
+--- !u!1001 &454488560
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 440372, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440372, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 440372, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440372, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440372, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440372, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440372, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 440372, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_RootGameObject: {fileID: 250035521}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1001 &488666296
 Prefab:
   m_ObjectHideFlags: 0
@@ -957,6 +1018,30 @@ Prefab:
       propertyPath: m_Animations.Array.data[0]
       value: 
       objectReference: {fileID: 7400000, guid: b64d9c22cf32b4e4898cc86a2e97ed47, type: 3}
+    - target: {fileID: 100010, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
   m_RootGameObject: {fileID: 112592556}
@@ -971,7 +1056,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 501901447}
   - 137: {fileID: 501901448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ModelSlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1033,7 +1118,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 510477123}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime_Joint01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1135,7 +1220,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 662009671}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1163,7 +1248,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 704974631}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime_Joint02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1254,7 +1339,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 745307558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime_Joint01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1278,8 +1363,8 @@ Transform:
 --- !u!1 &792460194
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 140374, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 792460195}
@@ -1296,8 +1381,8 @@ GameObject:
 --- !u!4 &792460195
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 440374, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 792460194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .00300000119, z: .00899999961}
@@ -1308,8 +1393,9 @@ Transform:
 --- !u!23 &792460196
 Renderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 2340370, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 792460194}
   m_Enabled: 1
   m_CastShadows: 1
@@ -1328,8 +1414,9 @@ Renderer:
 --- !u!135 &792460197
 SphereCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 13540370, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 792460194}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1340,8 +1427,9 @@ SphereCollider:
 --- !u!33 &792460198
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 3340370, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 792460194}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &860483169
@@ -1407,6 +1495,30 @@ Prefab:
       propertyPath: m_Animations.Array.data[0]
       value: 
       objectReference: {fileID: 7400000, guid: b64d9c22cf32b4e4898cc86a2e97ed47, type: 3}
+    - target: {fileID: 100008, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
   m_RootGameObject: {fileID: 1129927482}
@@ -1494,7 +1606,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 971915641}
   - 111: {fileID: 971915640}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cha_Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1534,8 +1646,8 @@ Transform:
 --- !u!1 &985794781
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100006, guid: d00e82e470b444db69a99bd8fc6935a0, type: 3}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 140376, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 985794782}
@@ -1549,8 +1661,8 @@ GameObject:
 --- !u!4 &985794782
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400006, guid: d00e82e470b444db69a99bd8fc6935a0, type: 3}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 440376, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 985794781}
   m_LocalRotation: {x: 0, y: 0, z: -.382683456, w: .923879504}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1562,8 +1674,8 @@ Transform:
 --- !u!1 &990182417
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100004, guid: d00e82e470b444db69a99bd8fc6935a0, type: 3}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 140378, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 990182420}
@@ -1580,9 +1692,9 @@ GameObject:
 --- !u!23 &990182418
 Renderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: d00e82e470b444db69a99bd8fc6935a0,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 2340372, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 990182417}
   m_Enabled: 1
   m_CastShadows: 1
@@ -1601,16 +1713,16 @@ Renderer:
 --- !u!33 &990182419
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: d00e82e470b444db69a99bd8fc6935a0,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 3340372, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 990182417}
   m_Mesh: {fileID: 4300000, guid: d00e82e470b444db69a99bd8fc6935a0, type: 3}
 --- !u!4 &990182420
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400004, guid: d00e82e470b444db69a99bd8fc6935a0, type: 3}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 440378, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 990182417}
   m_LocalRotation: {x: -.653281391, y: -.270598024, z: -.270597935, w: .653281629}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1621,8 +1733,9 @@ Transform:
 --- !u!64 &990182421
 MeshCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 6440370, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 990182417}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1639,7 +1752,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1008993984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Red Slime Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1726,6 +1839,30 @@ Prefab:
       propertyPath: m_Animations.Array.data[0]
       value: 
       objectReference: {fileID: 7400000, guid: b64d9c22cf32b4e4898cc86a2e97ed47, type: 3}
+    - target: {fileID: 100006, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
   m_RootGameObject: {fileID: 971915639}
@@ -1739,7 +1876,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1093077065}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime_Joint01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1769,7 +1906,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1129927483}
   - 111: {fileID: 1129927484}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cha_Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1809,8 +1946,8 @@ Animation:
 --- !u!1 &1196434273
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 140380, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1196434274}
@@ -1828,8 +1965,8 @@ GameObject:
 --- !u!4 &1196434274
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 440380, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1196434273}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12, y: 1, z: 0}
@@ -1844,8 +1981,9 @@ Transform:
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 9540370, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1196434273}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
@@ -1858,8 +1996,9 @@ Animator:
 --- !u!114 &1196434276
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 11440374, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1196434273}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1870,8 +2009,9 @@ MonoBehaviour:
 --- !u!114 &1196434277
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 11440376, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1196434273}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1880,11 +2020,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smallCookieScore: 20
   superCookieScore: 100
+  eatCookie: {fileID: 8300000, guid: 5ca77bdb114904066a689ca592a0ac8c, type: 3}
 --- !u!135 &1196434278
 SphereCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 13540372, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1196434273}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1964,7 +2106,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1407618275}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime_Joint03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1991,7 +2133,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1414113812}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime_Joint03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2013,8 +2155,8 @@ Transform:
 --- !u!1 &1430727582
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100004, guid: d00e82e470b444db69a99bd8fc6935a0, type: 3}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 140382, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1430727585}
@@ -2031,9 +2173,9 @@ GameObject:
 --- !u!23 &1430727583
 Renderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: d00e82e470b444db69a99bd8fc6935a0,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 2340374, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1430727582}
   m_Enabled: 1
   m_CastShadows: 1
@@ -2052,16 +2194,16 @@ Renderer:
 --- !u!33 &1430727584
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: d00e82e470b444db69a99bd8fc6935a0,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 3340374, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1430727582}
   m_Mesh: {fileID: 4300000, guid: d00e82e470b444db69a99bd8fc6935a0, type: 3}
 --- !u!4 &1430727585
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400004, guid: d00e82e470b444db69a99bd8fc6935a0, type: 3}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 440382, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1430727582}
   m_LocalRotation: {x: -.653281391, y: -.270598024, z: -.270597935, w: .653281629}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2072,8 +2214,9 @@ Transform:
 --- !u!64 &1430727586
 MeshCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 6440372, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1430727582}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -2085,8 +2228,8 @@ MeshCollider:
 --- !u!1 &1451283541
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 140384, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1451283542}
@@ -2100,8 +2243,8 @@ GameObject:
 --- !u!4 &1451283542
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 440384, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1451283541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2119,7 +2262,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1466444771}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime_Joint02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2141,8 +2284,8 @@ Transform:
 --- !u!1 &1508019334
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100006, guid: d00e82e470b444db69a99bd8fc6935a0, type: 3}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 140386, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1508019335}
@@ -2157,8 +2300,8 @@ GameObject:
 --- !u!4 &1508019335
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400006, guid: d00e82e470b444db69a99bd8fc6935a0, type: 3}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 440386, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1508019334}
   m_LocalRotation: {x: 0, y: 0, z: .382683456, w: .923879504}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2170,10 +2313,11 @@ Transform:
 --- !u!82 &1508019336
 AudioSource:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 8240370, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1508019334}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 5ca77bdb114904066a689ca592a0ac8c, type: 3}
   m_PlayOnAwake: 1
@@ -2233,7 +2377,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1529591943}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blue Slime Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2261,7 +2405,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1538502448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2320,6 +2464,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 155272, guid: acb4e21aa35a643c29b766134d31d07f, type: 2}
+      propertyPath: m_TagString
+      value: SuperCookie
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: acb4e21aa35a643c29b766134d31d07f, type: 2}
   m_RootGameObject: {fileID: 170501877}
@@ -2333,7 +2481,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1563098926}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime_Joint03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2399,8 +2547,8 @@ Prefab:
 --- !u!1 &1581301530
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 140388, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1581301531}
@@ -2417,8 +2565,8 @@ GameObject:
 --- !u!4 &1581301531
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 440388, guid: 46b855094e2514df491e64a33e693ae3, type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1581301530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .00300000119, z: -.00899999961}
@@ -2429,8 +2577,9 @@ Transform:
 --- !u!23 &1581301532
 Renderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 2340376, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1581301530}
   m_Enabled: 1
   m_CastShadows: 1
@@ -2449,8 +2598,9 @@ Renderer:
 --- !u!135 &1581301533
 SphereCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 13540374, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1581301530}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -2461,8 +2611,9 @@ SphereCollider:
 --- !u!33 &1581301534
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 3340376, guid: 46b855094e2514df491e64a33e693ae3,
+    type: 2}
+  m_PrefabInternal: {fileID: 454488560}
   m_GameObject: {fileID: 1581301530}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1634034670
@@ -2547,7 +2698,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1685473545}
   - 111: {fileID: 1685473546}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cha_Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2642,7 +2793,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1841235719}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Orange Slime Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2733,6 +2884,30 @@ Prefab:
       propertyPath: m_Animations.Array.data[1]
       value: 
       objectReference: {fileID: 7400016, guid: 449b48f7eb5d87a4baaa5fb73f875a59, type: 3}
+    - target: {fileID: 100004, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81c36e2bb74455a429ffac7ebb8fdf34, type: 3}
   m_RootGameObject: {fileID: 1685473544}
@@ -2747,7 +2922,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1990534251}
   - 137: {fileID: 1990534252}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ModelSlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
