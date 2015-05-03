@@ -4,11 +4,6 @@ var pelletPrefab : Transform;
 var superPrefab : Transform;
 var intersectionPrefab: Transform;
 var terrain : Terrain;
-var pacman : Transform;
-var blueGhost : Transform;
-var redGhost : Transform;
-var greenGhost : Transform;
-var orangeGhost : Transform;
 //http://www.tosos.com/PacManClone.zip
 // D for door,
 // G for ghost
@@ -33,13 +28,6 @@ function Awake () {
             } else if (map[j][i] == "I") {
             	Instantiate(intersectionPrefab, v, Quaternion.identity);
             	Instantiate (pelletPrefab, v, Quaternion.identity);
-            } else if (map[j][i] == "S") {
-            	Instantiate (pacman, v, Quaternion.identity);
-            } else if (map[j][i] == "G") {
-            	Instantiate (blueGhost, v, Quaternion.identity);
-            	Instantiate (redGhost, v, Quaternion.identity);
-            	Instantiate (greenGhost, v, Quaternion.identity);
-            	Instantiate (orangeGhost, v, Quaternion.identity);
             }
         }
     }

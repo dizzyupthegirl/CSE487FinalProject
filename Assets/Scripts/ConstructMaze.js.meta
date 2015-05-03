@@ -2,18 +2,7 @@ fileFormatVersion: 2
 guid: 89058dfe98ecb48ffb37a5e8642879a4
 MonoImporter:
   serializedVersion: 2
-  defaultReferences:
-  - mapAsset: {instanceID: 0}
-  - blockPrefab: {instanceID: 0}
-  - pelletPrefab: {instanceID: 0}
-  - superPrefab: {instanceID: 0}
-  - intersectionPrefab: {instanceID: 0}
-  - terrain: {instanceID: 0}
-  - pacman: {fileID: 440372, guid: 2e4c0cb251e3c402bbdf742910a782fb, type: 2}
-  - blueGhost: {fileID: 430626, guid: a3dad6ee53abf45ff9efb6ae19b82bbc, type: 2}
-  - redGhost: {fileID: 476162, guid: 8f7771f37a8b242209f375f96f336736, type: 2}
-  - greenGhost: {fileID: 475330, guid: 798cd9eb4359d425884d4f564667b178, type: 2}
-  - orangeGhost: {fileID: 442600, guid: 008b56ac789b04ed1a4e9812172ab305, type: 2}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
