@@ -5,6 +5,9 @@ var superPrefab : Transform;
 var intersectionPrefab: Transform;
 var terrain : Terrain;
 //http://www.tosos.com/PacManClone.zip
+// D for door,
+// G for ghost
+// S for Pacman starting point
 function Awake () {
     var map = mapAsset.text.Split ("\n"[0]);
     var v = new Vector3 ();
