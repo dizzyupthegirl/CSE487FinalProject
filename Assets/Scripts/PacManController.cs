@@ -2,11 +2,7 @@
 using System.Collections;
 
 public class PacManController : MonoBehaviour {
-	public float speed = 6.0F;
-	public float jumpSpeed = 8.0F;
-	public float gravity = 20.0F;
-	private Vector3 moveDirection = Vector3.zero;
-
+	public float speed=10.0f;
 	// Use this for initialization
 	void Start () {
 	
@@ -14,34 +10,23 @@ public class PacManController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//transform.Translate(-Vector3.right * Time.deltaTime*speed);
+		transform.Translate(-Vector3.right * Time.deltaTime*speed);
 
-
-
-	
-		CharacterController controller = GetComponent<CharacterController>();
-
-		if (controller.isGrounded) {
-			if (Input.GetAxisRaw ("Vertical") > 0) {
-				moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical")); 
-			}
+		if (Input.GetAxisRaw ("Vertical") > 0) {
+			//transform.rotation.y = 90.0f;
+			transform.rotation = Quaternion.AngleAxis(90, Vector3.up);
+		}
 			else if (Input.GetAxisRaw ("Vertical") < 0) {
-				moveDirection = new Vector3(0, 0, -1*Input.GetAxis("Vertical")); 
+			//transform.rotation.y = 270.0f;
+			transform.rotation = Quaternion.AngleAxis(270, Vector3.up);
 			}
 			else if (Input.GetAxisRaw ("Horizontal") > 0) {
-				moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, 0); 
+			//transform.rotation.y = 0.0f;
+			transform.rotation = Quaternion.AngleAxis(0, Vector3.up);
 			}
 			else if (Input.GetAxisRaw ("Horizontal") < 0) {
-				moveDirection = new Vector3(1*Input.GetAxis("Horizontal"), 0, 0); 
+				//transform.rotation.y = 180.0f;
+			transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
 			}
-
-			moveDirection = transform.TransformDirection(moveDirection);
-			moveDirection *= speed;
-			if (Input.GetButton("Jump"))
-				moveDirection.y = jumpSpeed;
-			
-		}
-		moveDirection.y -= gravity * Time.deltaTime;
-		controller.Move(moveDirection * Time.deltaTime);
 	}
 }
