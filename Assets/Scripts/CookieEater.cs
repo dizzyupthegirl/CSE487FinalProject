@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CookieEater : MonoBehaviour {
-	//public GUIText scoreText;
+
 	public int smallCookieScore=20;
 	public int superCookieScore=100;
 	public AudioClip eatCookie;
 	int score=0;
+	public Text scoreText;
 	// Use this for initialization
 	void Start () {
-		//scoreText.text = "Score: 0";
+		scoreText.text = "Score: 0";
 	}
 
 
@@ -27,6 +29,7 @@ public class CookieEater : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		//scoreText.text = "Score: " + score;
+		scoreText.text = "Score: " + score;
 	}
+
 }
