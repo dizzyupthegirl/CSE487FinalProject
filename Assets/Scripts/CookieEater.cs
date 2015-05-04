@@ -11,6 +11,7 @@ public class CookieEater : MonoBehaviour {
 	public Text scoreText;
 	// Use this for initialization
 	void Start () {
+		scoreText = GameObject.Find ("ScoreText").GetComponentInChildren<Text> ();
 		scoreText.text = "Score: 0";
 	}
 
