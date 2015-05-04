@@ -28,3 +28,7 @@ Library/InspectorExpandedItems.asset
 Library/ScriptAssemblies/Assembly-UnityScript.dll
 
 *.log
+
+*.dwlt
+
+*.dll
