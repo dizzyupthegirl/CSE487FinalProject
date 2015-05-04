@@ -29,6 +29,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 440372}
+  - 114: {fileID: 11449698}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Untagged
@@ -694,6 +695,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6.5
+--- !u!114 &11449698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cd737229df942a4acbcb68b86084a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpCam: {fileID: 182228}
+  wholeCam: {fileID: 140370}
 --- !u!114 &11482226
 MonoBehaviour:
   m_ObjectHideFlags: 1
