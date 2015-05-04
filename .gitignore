@@ -22,3 +22,9 @@ sysinfo.txt
 Library/CurrentLayout.dwlt
 
 Library/expandedItems
+
+Library/InspectorExpandedItems.asset
+
+Library/ScriptAssemblies/Assembly-UnityScript.dll
+
+*.log
