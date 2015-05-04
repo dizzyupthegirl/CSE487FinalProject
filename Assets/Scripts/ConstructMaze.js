@@ -1,7 +1,7 @@
 var mapAsset : TextAsset;
-var blockPrefab : Transform;
-var pelletPrefab : Transform;
-var superPrefab : Transform;
+var blockPrefab : GameObject;
+var pelletPrefab : GameObject;
+var superPrefab : GameObject;
 var intersectionPrefab: Transform;
 var terrain : Terrain;
 var pacman : Transform;
@@ -9,6 +9,8 @@ var blueGhost : Transform;
 var redGhost : Transform;
 var greenGhost : Transform;
 var orangeGhost : Transform;
+var cookieFolder: GameObject;
+var wallFolder: GameObject;
 //http://www.tosos.com/PacManClone.zip
 // D for door,
 // G for ghost
@@ -25,11 +27,14 @@ function Awake () {
             v.x = (-1 * terrain.terrainData.size.x / 2 + i + i_off) * 2 + i_off/4;
             if (map[j][i] == "X") {
                 var inst = Instantiate (blockPrefab, v, Quaternion.identity);
-                inst.transform.parent = transform;
+                inst.transform.parent = wallFolder.transform;
             } else if (map[j][i] == ".") {
-                Instantiate (pelletPrefab, v, Quaternion.identity);
+                var cookie=Instantiate (pelletPrefab, v, Quaternion.identity);
+                 cookie.transform.parent = cookieFolder.transform;
             } else if (map[j][i] == "O") {
-                Instantiate (superPrefab, v, Quaternion.identity);
+                var supercookie=Instantiate (superPrefab, v, Quaternion.identity);
+                supercookie.transform.parent=cookieFolder.transform;
+                
             } else if (map[j][i] == "I") {
             	Instantiate(intersectionPrefab, v, Quaternion.identity);
             	Instantiate (pelletPrefab, v, Quaternion.identity);
