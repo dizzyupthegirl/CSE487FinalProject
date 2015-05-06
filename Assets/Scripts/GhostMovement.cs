@@ -37,7 +37,7 @@ public class GhostMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (targetObject == null) {
-			targetObject = GameObject.Find("First Person Controller");
+			targetObject = GameObject.Find("First Person Controller(Clone)");
 		}
 	}
 
@@ -61,7 +61,7 @@ public class GhostMovement : MonoBehaviour {
 		Vector3 targetPosition = target.position + target.up * height - target.forward * distance;
 		
 		//Quaternion targetRotation = Quaternion.LookRotation(target.position-transform.position, target.up);
-		transform.Translate (directionVector, Space.World);
+		transform.Translate (directionVector * Time.deltaTime, Space.World);
 //		rBody.position = Vector3.MoveTowards(rBody.position, targetPosition, positionDamping * Time.deltaTime);
 //		rBody.rotation = Quaternion.RotateTowards(rBody.rotation, targetRotation, rotationDamping * Time.deltaTime);
 		
@@ -118,7 +118,7 @@ public class GhostMovement : MonoBehaviour {
 		int dir = (int)Random.Range(0, 4);
 		switch (dir) {
 		case 0:
-			directionVector = posZ;
+			directionVector = new Vector3(0,0,0);
 			transform.LookAt(transform.position + new Vector3(0,0,2));
 			break;
 		case 1:
