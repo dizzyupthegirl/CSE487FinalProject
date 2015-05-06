@@ -88,6 +88,7 @@ public class GhostMovement : MonoBehaviour {
 		if (other.tag=="Intersection") {
 			ChangeDirection();
 		} else if (other.tag == "Ghost Pen" && inPen) {
+			print ("Intersection");
 			ChangeDirectionPen();
 			inPen = false;
 		}
@@ -122,11 +123,11 @@ public class GhostMovement : MonoBehaviour {
 			transform.LookAt(transform.position + new Vector3(0,0,2));
 			break;
 		case 1:
-			directionVector = posX;
+			directionVector = new Vector3(0,0,0);
 			transform.LookAt(transform.position + new Vector3(2,0,0));
 			break;
 		case 2:
-			directionVector = negX;
+			directionVector = new Vector3(0,0,0);
 			transform.LookAt(transform.position + new Vector3(0,0,2));
 			break;
 		}

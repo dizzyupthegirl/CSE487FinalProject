@@ -45,7 +45,6 @@ function Awake () {
             } else if (map[j][i] == "S") {
             	Instantiate (pacman, v, Quaternion.identity);
             } else if (map[j][i] == "G") {
-            	v.y = 2;
             	//Instantiate (blueGhost, v, Quaternion.identity);
             	//Instantiate (redGhost, v, Quaternion.identity);
             	Instantiate (greenGhost, v, Quaternion.identity);
