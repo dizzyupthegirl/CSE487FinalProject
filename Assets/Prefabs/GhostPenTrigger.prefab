@@ -12,8 +12,8 @@ GameObject:
   - 135: {fileID: 13589340}
   - 23: {fileID: 2389340}
   m_Layer: 0
-  m_Name: IntersectionTrigger
-  m_TagString: Intersection
+  m_Name: GhostPenTrigger
+  m_TagString: Ghost Pen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

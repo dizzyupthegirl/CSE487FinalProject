@@ -11,6 +11,7 @@ var greenGhost : Transform;
 var orangeGhost : Transform;
 var cookieFolder: GameObject;
 var wallFolder: GameObject;
+var ghostPenIntersection: Transform;
 //http://www.tosos.com/PacManClone.zip
 // D for door,
 // G for ghost
@@ -37,6 +38,9 @@ function Awake () {
                 
             } else if (map[j][i] == "I") {
             	Instantiate(intersectionPrefab, v, Quaternion.identity);
+            	Instantiate (pelletPrefab, v, Quaternion.identity);
+            } else if (map[j][i] == "P") {
+            	Instantiate(ghostPenIntersection, v, Quaternion.identity);
             	Instantiate (pelletPrefab, v, Quaternion.identity);
             } else if (map[j][i] == "S") {
             	Instantiate (pacman, v, Quaternion.identity);

@@ -40,9 +40,10 @@ GameObject:
   - 4: {fileID: 476162}
   - 82: {fileID: 8272812}
   - 82: {fileID: 8272814}
+  - 54: {fileID: 5438400}
   m_Layer: 8
   m_Name: Red Slime Monster
-  m_TagString: Untagged
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,6 +200,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 476160}
   m_RootOrder: 1
+--- !u!54 &5438400
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176162}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!82 &8272812
 AudioSource:
   m_ObjectHideFlags: 1

@@ -86,9 +86,10 @@ GameObject:
   - 4: {fileID: 442600}
   - 82: {fileID: 8250346}
   - 82: {fileID: 8250348}
+  - 54: {fileID: 5476904}
   m_Layer: 8
   m_Name: Orange Slime Monster
-  m_TagString: Untagged
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,6 +200,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 442596}
   m_RootOrder: 0
+--- !u!54 &5476904
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142600}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!82 &8250346
 AudioSource:
   m_ObjectHideFlags: 1
