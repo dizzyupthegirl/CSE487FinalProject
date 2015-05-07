@@ -66,8 +66,7 @@ public class GhostMovement : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision){
 		if (collision.gameObject.tag == "Wall") {
-			// Maybe we can use well placed colliders to detect what walls are around....
-			//directionalVector = transform.right; 
+			directionVector = Vector3.Reflect(directionVector, Vector3.up);
 		}
 		else if (collision.gameObject.tag == "Pacman") {
 			if (chaseMode) {
