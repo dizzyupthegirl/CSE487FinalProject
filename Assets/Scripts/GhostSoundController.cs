@@ -9,7 +9,6 @@ public class GhostSoundController : MonoBehaviour {
 	void Start () {
 		regularSound.Play ();
 		scaredSound.Stop ();
-		becomeScared ();
 	}
 
 	public void becomeScared() {

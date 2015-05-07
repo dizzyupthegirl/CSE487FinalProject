@@ -40,6 +40,7 @@ GameObject:
   - 4: {fileID: 476162}
   - 82: {fileID: 8272812}
   - 82: {fileID: 8272814}
+  - 114: {fileID: 11464816}
   - 54: {fileID: 5438400}
   - 135: {fileID: 13598762}
   - 114: {fileID: 11494342}
@@ -348,6 +349,19 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &11464816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a86d477f1375342f0babf6701e783883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regularSound: {fileID: 8272812}
+  scaredSound: {fileID: 8272814}
 --- !u!114 &11494342
 MonoBehaviour:
   m_ObjectHideFlags: 1
