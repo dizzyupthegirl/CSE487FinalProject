@@ -15,7 +15,7 @@ public class GhostMovement : MonoBehaviour {
 	public float positionDamping;   
 	public float rotationDamping;   
 	Rigidbody rBody;
-	bool dead, playingAnim, chaseMode, inPen;
+	bool dead, playingAnim, chaseMode, inPen, canGoUp, canGoRight, canGoDown, canGoLeft;
 	GameObject targetObject;
 	public Animation anim;
 	float timeElapsed;
@@ -33,15 +33,12 @@ public class GhostMovement : MonoBehaviour {
 	void Awake() {
 		rBody = GetComponent<Rigidbody>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+
+	public void FixedUpdate () {
 		if (targetObject == null) {
 			targetObject = GameObject.Find("First Person Controller(Clone)");
 		}
-	}
-
-	public void FixedUpdate () {
 		timeElapsed = timeElapsed + Time.deltaTime;
 		
 		target = targetObject.transform;
@@ -78,17 +75,24 @@ public class GhostMovement : MonoBehaviour {
 			}
 			else {
 				// I'm thinking Lerp to ghost pen?
+				// Step 1: move to pen
+				// Step 2:
+				inPen = true;
 			}
 		}
 
 	}
 
 	void OnTriggerEnter (Collider other) {
-		print ("Tag Trigger Entered: " + other.tag);
 		if (other.tag=="Intersection") {
+			Vector3 trig = other.gameObject.transform.position;
+			transform.position = new Vector3(trig.x, trig.y, trig.z);
+			LookForWalls();
 			ChangeDirection();
 		} else if (other.tag == "Ghost Pen" && inPen) {
-			print ("Intersection");
+			Vector3 trig = other.gameObject.transform.position;
+			transform.position = new Vector3(trig.x, trig.y, trig.z);
+			LookForWalls();
 			ChangeDirectionPen();
 			inPen = false;
 		}
@@ -96,40 +100,83 @@ public class GhostMovement : MonoBehaviour {
 
 	void ChangeDirection() {
 		int dir = (int)Random.Range(0, 4);
-		switch (dir) {
-		case 0:
+		if (dir == 0 && canGoUp) {
 			directionVector = posZ;
-			transform.LookAt(transform.position + new Vector3(0,0,2));
-			break;
-		case 1:
+			transform.LookAt (transform.position + new Vector3 (0, 0, 2));
+		} else if (dir == 1 && canGoRight) {
 			directionVector = posX;
-			transform.LookAt(transform.position + new Vector3(2,0,0));
-			break;
-		case 2:
-			directionVector = negZ;
-			transform.LookAt(transform.position + new Vector3(0,0,-2));
-			break;
-		case 3:
+			transform.LookAt (transform.position + new Vector3 (2, 0, 0));
+		} else if (dir == 2 && canGoLeft) {
 			directionVector = negX;
-			transform.LookAt(transform.position + new Vector3(0,0,2));
-			break;
+			transform.LookAt (transform.position + new Vector3 (-2, 0, 0));
+		} else if (dir == 3 && canGoDown) {
+			directionVector = negZ;
+			transform.LookAt(transform.position + new Vector3 (0, 0, -2));
 		}
+		else ChangeDirection();
 	}
 	void ChangeDirectionPen() {
-		int dir = (int)Random.Range(0, 4);
-		switch (dir) {
-		case 0:
-			directionVector = new Vector3(0,0,0);
+		int dir = (int)Random.Range(0, 3);
+		if (dir ==0 && canGoUp) {
+			directionVector = posZ;
 			transform.LookAt(transform.position + new Vector3(0,0,2));
-			break;
-		case 1:
-			directionVector = new Vector3(0,0,0);
-			transform.LookAt(transform.position + new Vector3(2,0,0));
-			break;
-		case 2:
-			directionVector = new Vector3(0,0,0);
-			transform.LookAt(transform.position + new Vector3(0,0,2));
-			break;
 		}
+		else if (dir== 1 && canGoRight){
+			directionVector = posX;
+			transform.LookAt(transform.position + new Vector3(2,0,0));
+		}
+		else if (dir== 2 && canGoLeft){
+			directionVector = negX;
+			transform.LookAt(transform.position + new Vector3(-2,0,0));
+		}
+		else ChangeDirectionPen();
+		
+	}
+
+	void LookForWalls() {
+		int layerMask = 1 << 9;
+		// Positive Z
+		RaycastHit hit;
+		Vector3 ghostPos = transform.position;
+		Debug.DrawRay (ghostPos, posZ * 1.0f);
+		Debug.DrawRay (ghostPos, posX * 1.0f);
+		Debug.DrawRay (ghostPos, posZ * 1.0f);
+		Debug.DrawRay (ghostPos, posZ * 1.0f);
+		if (Physics.Raycast (ghostPos + new Vector3(0,0,.2f), posZ, out hit, 1.5f, layerMask)) {
+			if (hit.collider.tag == "Wall") {
+
+				canGoUp = false;
+			}
+			else canGoUp = true;
+		}
+		else canGoUp = true;
+
+		// Positive X
+		if (Physics.Raycast (ghostPos + new Vector3(.2f,0,0), posX, out hit, 1.5f, layerMask)) {
+			if (hit.collider.tag == "Wall") {
+				canGoRight = false;
+			}
+			else canGoRight = true;
+		}
+		else canGoRight = true;
+
+		// NegZ
+		if (Physics.Raycast (ghostPos + new Vector3(0,0,-.2f), negZ, out hit, 1.5f, layerMask)) {
+			if (hit.collider.tag == "Wall") {
+				canGoDown = false;
+			}
+			else canGoDown = true;
+		}
+		else canGoDown = true;
+
+		//Neg X
+		if (Physics.Raycast (ghostPos+ new Vector3(-.2f,0,0), negX, out hit, 1.5f, layerMask)) {
+			if (hit.collider.tag == "Wall") {
+				canGoLeft = false;
+			}
+			else canGoLeft = true;
+		}
+		else canGoLeft = true;
+
 	}
 }

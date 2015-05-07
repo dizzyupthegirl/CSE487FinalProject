@@ -16,6 +16,7 @@ var ghostPenIntersection: Transform;
 // D for door,
 // G for ghost
 // S for Pacman starting point
+// U for super cookie and intersection
 function Awake () {
     var map = mapAsset.text.Split ("\n"[0]);
     var v = new Vector3 ();
@@ -35,8 +36,8 @@ function Awake () {
             } else if (map[j][i] == "O") {
                 var supercookie=Instantiate (superPrefab, v, Quaternion.identity);
                 supercookie.transform.parent=cookieFolder.transform;
-                
-            } else if (map[j][i] == "I") {
+                Instantiate(intersectionPrefab, v, Quaternion.identity);
+            }else if (map[j][i] == "I") {
             	Instantiate(intersectionPrefab, v, Quaternion.identity);
             	Instantiate (pelletPrefab, v, Quaternion.identity);
             } else if (map[j][i] == "P") {
@@ -45,10 +46,10 @@ function Awake () {
             } else if (map[j][i] == "S") {
             	Instantiate (pacman, v, Quaternion.identity);
             } else if (map[j][i] == "G") {
-            	//Instantiate (blueGhost, v, Quaternion.identity);
-            	//Instantiate (redGhost, v, Quaternion.identity);
+            	Instantiate (blueGhost, v, Quaternion.identity);
+            	Instantiate (redGhost, v, Quaternion.identity);
             	Instantiate (greenGhost, v, Quaternion.identity);
-            	//Instantiate (orangeGhost, v, Quaternion.identity);
+            	Instantiate (orangeGhost, v, Quaternion.identity);
             }
         }
     }

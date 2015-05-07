@@ -88,8 +88,8 @@ GameObject:
   - 82: {fileID: 8294114}
   - 82: {fileID: 8294112}
   - 54: {fileID: 5427818}
-  - 114: {fileID: 11469496}
   - 135: {fileID: 13505154}
+  - 114: {fileID: 11469496}
   m_Layer: 8
   m_Name: Green Slime Monster
   m_TagString: Ghost
@@ -374,7 +374,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.74000001
+  m_Radius: .100000001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &13775332
 SkinnedMeshRenderer:

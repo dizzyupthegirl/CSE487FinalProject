@@ -88,6 +88,7 @@ GameObject:
   - 82: {fileID: 8250348}
   - 54: {fileID: 5476904}
   - 135: {fileID: 13590086}
+  - 114: {fileID: 11438504}
   m_Layer: 8
   m_Name: Orange Slime Monster
   m_TagString: Ghost
@@ -211,10 +212,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!82 &8250346
 AudioSource:
@@ -347,6 +348,22 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &11438504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c159ec99d76ec4ebb959bb7bdff251f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0
+  height: 0
+  positionDamping: 0
+  rotationDamping: 0
+  anim: {fileID: 11142590}
 --- !u!135 &13590086
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -357,7 +374,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.33999991
+  m_Radius: .100000001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &13742590
 SkinnedMeshRenderer:
