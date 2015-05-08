@@ -48,7 +48,7 @@ public class GhostMovement : MonoBehaviour {
 				anim.CrossFade ("Dead");
 				playingAnim = true;
 			} else if (distance < 2) {
-				anim.CrossFade ("Attack");				
+				//anim.CrossFade ("Attack");				
 			} else {
 				anim.CrossFade ("Walk");
 				
@@ -141,7 +141,7 @@ public class GhostMovement : MonoBehaviour {
 		Debug.DrawRay (ghostPos, posX * 1.0f);
 		Debug.DrawRay (ghostPos, posZ * 1.0f);
 		Debug.DrawRay (ghostPos, posZ * 1.0f);
-		if (Physics.Raycast (ghostPos + new Vector3(0,0,.2f), posZ, out hit, 1.5f, layerMask)) {
+		if (Physics.Raycast (ghostPos + new Vector3(0,0,.2f), posZ, out hit, 2.0f, layerMask)) {
 			if (hit.collider.tag == "Wall") {
 
 				canGoUp = false;
@@ -151,7 +151,7 @@ public class GhostMovement : MonoBehaviour {
 		else canGoUp = true;
 
 		// Positive X
-		if (Physics.Raycast (ghostPos + new Vector3(.2f,0,0), posX, out hit, 1.5f, layerMask)) {
+		if (Physics.Raycast (ghostPos + new Vector3(.2f,0,0), posX, out hit, 2.0f, layerMask)) {
 			if (hit.collider.tag == "Wall") {
 				canGoRight = false;
 			}
@@ -160,7 +160,7 @@ public class GhostMovement : MonoBehaviour {
 		else canGoRight = true;
 
 		// NegZ
-		if (Physics.Raycast (ghostPos + new Vector3(0,0,-.2f), negZ, out hit, 1.5f, layerMask)) {
+		if (Physics.Raycast (ghostPos + new Vector3(0,0,-.2f), negZ, out hit, 2.0f, layerMask)) {
 			if (hit.collider.tag == "Wall") {
 				canGoDown = false;
 			}
@@ -169,7 +169,7 @@ public class GhostMovement : MonoBehaviour {
 		else canGoDown = true;
 
 		//Neg X
-		if (Physics.Raycast (ghostPos+ new Vector3(-.2f,0,0), negX, out hit, 1.5f, layerMask)) {
+		if (Physics.Raycast (ghostPos+ new Vector3(-.2f,0,0), negX, out hit, 2.0f, layerMask)) {
 			if (hit.collider.tag == "Wall") {
 				canGoLeft = false;
 			}
