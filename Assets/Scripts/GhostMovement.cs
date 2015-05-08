@@ -14,6 +14,7 @@ public class GhostMovement : MonoBehaviour {
 	public float height;        
 	public float positionDamping;   
 	public float rotationDamping;   
+	public float speed;
 	Rigidbody rBody;
 	bool dead, playingAnim, chaseMode, inPen, canGoUp, canGoRight, canGoDown, canGoLeft;
 	GameObject targetObject;
@@ -58,7 +59,7 @@ public class GhostMovement : MonoBehaviour {
 		Vector3 targetPosition = target.position + target.up * height - target.forward * distance;
 		
 		//Quaternion targetRotation = Quaternion.LookRotation(target.position-transform.position, target.up);
-		transform.Translate (directionVector * Time.deltaTime, Space.World);
+		transform.Translate (directionVector * Time.deltaTime*speed, Space.World);
 //		rBody.position = Vector3.MoveTowards(rBody.position, targetPosition, positionDamping * Time.deltaTime);
 //		rBody.rotation = Quaternion.RotateTowards(rBody.rotation, targetRotation, rotationDamping * Time.deltaTime);
 		
