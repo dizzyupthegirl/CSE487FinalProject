@@ -133,6 +133,7 @@ public class GhostMovement : MonoBehaviour {
 	}
 
 	void LookForWalls() {
+		transform.LookAt (transform.position + new Vector3 (0, 0, 2));
 		int layerMask = 1 << 9;
 		// Positive Z
 		RaycastHit hit;

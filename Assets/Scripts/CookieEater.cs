@@ -21,11 +21,13 @@ public class CookieEater : MonoBehaviour {
 		print ("Tag Trigger Entered: " + other.tag);
 		if (other.tag=="Cookie") {
 			score += smallCookieScore;
+			Destroy (other.gameObject);
 		} else if (other.tag == "SuperCookie") {
 			score += superCookieScore;
+			Destroy (other.gameObject);
 		}
 		AudioSource.PlayClipAtPoint(eatCookie, other.gameObject.transform.position);
-		Destroy (other.gameObject);
+
 	}
 
 	// Update is called once per frame
