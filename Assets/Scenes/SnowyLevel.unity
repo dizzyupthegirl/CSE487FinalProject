@@ -180,7 +180,7 @@ MonoBehaviour:
   mapAsset: {fileID: 4900000, guid: 3b09b55dbb73a4913841025954c249c6, type: 3}
   blockPrefab: {fileID: 115772, guid: 4c4dd8a0254cab3439a2dc1b4ee3d153, type: 2}
   pelletPrefab: {fileID: 140126, guid: 627d5dee46b59423b950a06ea3c8d9d6, type: 2}
-  superPrefab: {fileID: 155272, guid: acb4e21aa35a643c29b766134d31d07f, type: 2}
+  superPrefab: {fileID: 142364, guid: 5f1661619f0054718a399bb2fc1bee69, type: 2}
   intersectionPrefab: {fileID: 489340, guid: ae504e295c96b4dc0985626af24849d8, type: 2}
   terrain: {fileID: 988295868}
   pacman: {fileID: 440372, guid: 2e4c0cb251e3c402bbdf742910a782fb, type: 2}
