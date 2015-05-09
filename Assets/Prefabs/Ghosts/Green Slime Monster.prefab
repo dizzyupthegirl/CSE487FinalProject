@@ -58,7 +58,7 @@ GameObject:
   - 137: {fileID: 13775332}
   m_Layer: 8
   m_Name: ModelSlime
-  m_TagString: Untagged
+  m_TagString: SlimeModel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

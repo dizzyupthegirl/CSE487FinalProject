@@ -11,7 +11,7 @@ TagManager:
   - Wall
   - Lives
   - Ghost2
-  - 
+  - SlimeModel
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
