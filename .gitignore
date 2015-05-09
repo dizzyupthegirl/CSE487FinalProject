@@ -32,3 +32,5 @@ Library/metadata/*
 *.dwlt
 
 *.dll
+
+Library/FailedAssetImports.txt

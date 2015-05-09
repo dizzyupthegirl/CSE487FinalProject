@@ -682,7 +682,7 @@ MonoBehaviour:
   smallCookieScore: 20
   superCookieScore: 100
   eatCookie: {fileID: 8300000, guid: 5ca77bdb114904066a689ca592a0ac8c, type: 3}
-  scoreText: {fileID: 0}
+  eatMe: {fileID: 2800000, guid: 02d07ce9447a24a3993725dc8dca96e2, type: 3}
 --- !u!114 &11440376
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
 	//Update is called once per frame
 	void Update () {
 		numCookies = cookieFolder.transform.childCount;
-		print ("Cookies: " + numCookies);
+		//print ("Cookies: " + numCookies);
 		if (numCookies == 0) {
 			winnerText.text="WOO HOO YOU WIN! " +
 				"WINNER WINNER CHICKEN DINNER";
