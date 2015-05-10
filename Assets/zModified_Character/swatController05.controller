@@ -118,7 +118,7 @@ BlendTree:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: StrafeLeft
+  m_Name: StrafeRight
   m_Childs:
   - m_Motion: {fileID: 7400000, guid: f48dc6d81c1633b4ab7557745c352675, type: 3}
     m_Threshold: -2
@@ -127,7 +127,7 @@ BlendTree:
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  - m_Motion: {fileID: 7400000, guid: ca8d29e3afeff744db93364ec0d4e552, type: 3}
+  - m_Motion: {fileID: 7400000, guid: c16bf75b48dd0014c991e69555be14ee, type: 3}
     m_Threshold: -1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -200,7 +200,7 @@ BlendTree:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: StrafeRight
+  m_Name: StrafeLeft
   m_Childs:
   - m_Motion: {fileID: 7400000, guid: 7774d7c64435e9a4b8aefc7f6801fa8b, type: 3}
     m_Threshold: 0
@@ -209,7 +209,7 @@ BlendTree:
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  - m_Motion: {fileID: 7400000, guid: c16bf75b48dd0014c991e69555be14ee, type: 3}
+  - m_Motion: {fileID: 7400000, guid: ca8d29e3afeff744db93364ec0d4e552, type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1

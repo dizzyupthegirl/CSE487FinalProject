@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class ThrowObjectFinal : MonoBehaviour {
-	public GameObject projectile;
+	public GameObject projectile, clone;
 	public Vector3 projectileOffset;
 	public Vector3 projectileForce;
 	public Transform charactersHand;
@@ -32,24 +32,24 @@ public class ThrowObjectFinal : MonoBehaviour {
 	
 	public void Prepare () {
 		prepared = true;
-		projectile = Instantiate(projectile, charactersHand.position, charactersHand.rotation) as GameObject;
-		if(projectile.GetComponent<Rigidbody>())
-			Destroy(projectile.GetComponent<Rigidbody>());
-		projectile.GetComponent<SphereCollider>().enabled = false;		
-		projectile.name = "projectile";
-		projectile.transform.parent = charactersHand;
-		projectile.transform.localPosition = projectileOffset;
-		projectile.transform.localEulerAngles = Vector3.zero;		
+		clone = Instantiate(projectile, charactersHand.position, charactersHand.rotation) as GameObject;
+		if(clone.GetComponent<Rigidbody>())
+			Destroy(clone.GetComponent<Rigidbody>());
+		clone.GetComponent<SphereCollider>().enabled = false;		
+		clone.name = "projectile";
+		clone.transform.parent = charactersHand;
+		clone.transform.localPosition = projectileOffset;
+		clone.transform.localEulerAngles = Vector3.zero;		
 	}	
 	public void Throw () {
 		threw = true;
 		Vector3 dir = transform.rotation.eulerAngles;
 		dir.y += compensationYAngle;
-		projectile.transform.rotation = Quaternion.Euler(dir);
-		projectile.transform.parent = null;		
-		projectile.GetComponent<SphereCollider>().enabled = true;		
-		projectile.AddComponent<Rigidbody>();
-		Physics.IgnoreCollision(projectile.GetComponent<Collider>(), GetComponent<Collider>());
-		projectile.GetComponent<Rigidbody>().AddRelativeForce(projectileForce);	
+		clone.transform.rotation = Quaternion.Euler(dir);
+		clone.transform.parent = null;		
+		clone.GetComponent<SphereCollider>().enabled = true;		
+		clone.AddComponent<Rigidbody>();
+		Physics.IgnoreCollision(clone.GetComponent<Collider>(), GetComponent<Collider>());
+		clone.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, 400));	
 	}
 }
