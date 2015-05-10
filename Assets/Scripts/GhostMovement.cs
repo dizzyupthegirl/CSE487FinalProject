@@ -7,7 +7,7 @@ public class GhostMovement : MonoBehaviour {
 	Vector3 posZ = new Vector3(0,0,1);
 	Vector3 negZ = new Vector3(0,0,-1);
 
-	Vector3 directionVector;
+	public Vector3 directionVector;
 
 
 	public float distance;     
