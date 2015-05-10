@@ -57,7 +57,11 @@ public class GhostMovement : MonoBehaviour {
 				
 			}
 		}
+<<<<<<< Updated upstream
 		//print ("Can we eat ghost?" + pacMan.areWeEating());
+=======
+
+>>>>>>> Stashed changes
 		if (pacMan.areWeEating()) {
 			chaseMode=false;
 		}
@@ -99,6 +103,7 @@ public class GhostMovement : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider other) {
+		print ("Ghost triggered: " + other.tag);
 		if (other.tag=="Intersection") {
 			Vector3 trig = other.gameObject.transform.position;
 			transform.position = new Vector3(trig.x, trig.y, trig.z);
