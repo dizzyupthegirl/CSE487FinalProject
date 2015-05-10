@@ -34,7 +34,7 @@ public class ThrowObjectFinal : MonoBehaviour {
 		prepared = true;
 		clone = Instantiate(projectile, charactersHand.position, charactersHand.rotation) as GameObject;
 		if(clone.GetComponent<Rigidbody>())
-			Destroy(clone.GetComponent<Rigidbody>());
+			//Destroy(clone.GetComponent<Rigidbody>());
 		Destroy (clone.GetComponent<SphereCollider> ());
 		clone.AddComponent<BoxCollider> ();
 		clone.GetComponent<BoxCollider>().enabled = false;		
@@ -50,13 +50,13 @@ public class ThrowObjectFinal : MonoBehaviour {
 		clone.transform.rotation = Quaternion.Euler(dir);
 		clone.transform.parent = null;		
 		clone.GetComponent<BoxCollider>().enabled = true;		
-		clone.AddComponent<Rigidbody>();
+		//clone.AddComponent<Rigidbody>();
 
 		Physics.IgnoreCollision(clone.GetComponent<Collider>(), GetComponent<Collider>());
-		clone.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, 400));
-		clone.GetComponent<Rigidbody>().freezeRotation = true;
-		Destroy (clone.GetComponent<GhostMovement> ());
-		clone.AddComponent<BonusGhostMovement> ();
-		clone.GetComponent<BonusGhostMovement> ().target = GameObject.Find ("First Person Controller").transform;
+		clone.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, 100));
+		//clone.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezeRotationX;
+
+		//clone.AddComponent<BonusGhostMovement> ();
+		//clone.GetComponent<BonusGhostMovement> ().target = GameObject.Find ("First Person Controller").transform;
 	}
 }
