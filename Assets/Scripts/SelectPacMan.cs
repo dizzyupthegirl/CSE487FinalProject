@@ -6,7 +6,7 @@ public class SelectPacMan : MonoBehaviour {
 
 	public Toggle topHat, tongueGuy, pacMan;
 	public Button letsGoButton;
-	public int chosenPacMan;
+	public static int chosenPacMan;
 	void Awake () {
 		
 		DontDestroyOnLoad (transform.gameObject);
@@ -38,4 +38,8 @@ public class SelectPacMan : MonoBehaviour {
 	
 	}
 
+	public int getChosen(){
+		return chosenPacMan;
+	
+	}
 }

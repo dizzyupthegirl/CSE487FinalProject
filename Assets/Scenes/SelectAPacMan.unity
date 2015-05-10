@@ -448,7 +448,7 @@ GameObject:
   - 114: {fileID: 262930717}
   m_Layer: 0
   m_Name: KeepSelection
-  m_TagString: Untagged
+  m_TagString: Selection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -469,7 +469,6 @@ MonoBehaviour:
   tongueGuy: {fileID: 1630130713}
   pacMan: {fileID: 1548351667}
   letsGoButton: {fileID: 1738114922}
-  chosenPacMan: 0
 --- !u!4 &262930718
 Transform:
   m_ObjectHideFlags: 0
@@ -3833,6 +3832,10 @@ Prefab:
       propertyPath: letsGoButton
       value: 
       objectReference: {fileID: 1738114922}
+    - target: {fileID: 100342, guid: 5092c02f98e7b4f9dac43f73aad99b6d, type: 2}
+      propertyPath: m_TagString
+      value: Selection
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5092c02f98e7b4f9dac43f73aad99b6d, type: 2}
   m_RootGameObject: {fileID: 262930716}

@@ -25,7 +25,7 @@ function Awake () {
     var v = new Vector3 ();
     v.y = 1.0;
     var j_off = terrain.terrainData.size.z / 2.0;
-    chosenPacMan=GameObject.FindGameObjectWithTag("Selection").GetComponent("SelectPacMan").ChosenPacMan;
+    chosenPacMan=gameObject.FindGameObjectWithTag("Selection").GetComponent("SelectPacMan").getChosen();
     for (var j = 0; j < map.length; j ++) {
         v.z = (terrain.terrainData.size.z - j - j_off - 1) * 2;
         var i_off = terrain.terrainData.size.x / 2.0;
