@@ -16,7 +16,7 @@ public class BonusGhostMovement : MonoBehaviour {
 	public float rotationDamping;   
 	public float speed;
 	Rigidbody rBody;
-	bool dead, playingAnim, chaseMode, inPen, canGoUp, canGoRight, canGoDown, canGoLeft;
+	bool dead, playingAnim, chaseMode, canGoUp, canGoRight, canGoDown, canGoLeft;
 	GameObject targetObject;
 	public Animation anim;
 	float timeElapsed;
@@ -28,7 +28,6 @@ public class BonusGhostMovement : MonoBehaviour {
 		chaseMode = true;
 		dead=false;
 		playingAnim = false;
-		inPen = true;
 	}
 
 	void Awake() {
@@ -46,7 +45,7 @@ public class BonusGhostMovement : MonoBehaviour {
 				anim.CrossFade ("Dead");
 				playingAnim = true;
 			} else if (distance < 2) {
-				//anim.CrossFade ("Attack");				
+				anim.CrossFade ("Attack");				
 			} else {
 				anim.CrossFade ("Walk");
 				
@@ -55,30 +54,23 @@ public class BonusGhostMovement : MonoBehaviour {
 		
 		Vector3 targetPosition = target.position + target.up * height - target.forward * distance;
 		
-		//Quaternion targetRotation = Quaternion.LookRotation(target.position-transform.position, target.up);
+		Quaternion targetRotation = Quaternion.LookRotation(target.position-transform.position, target.up);
 		transform.Translate (directionVector * Time.deltaTime*speed);
 //		rBody.position = Vector3.MoveTowards(rBody.position, targetPosition, positionDamping * Time.deltaTime);
-//		rBody.rotation = Quaternion.RotateTowards(rBody.rotation, targetRotation, rotationDamping * Time.deltaTime);
+		rBody.rotation = Quaternion.RotateTowards(rBody.rotation, targetRotation, rotationDamping * Time.deltaTime);
 		
 	}
 
 	void OnCollisionEnter(Collision collision){
-		if (collision.gameObject.tag == "Wall") {
-			directionVector = Vector3.Reflect(directionVector, Vector3.up);
+				if (collision.gameObject.tag == "Wall") {
+						directionVector = Vector3.Reflect (directionVector, Vector3.up);
+				} else if (collision.gameObject.tag == "Pacman") {
+						if (chaseMode) {
+
+						}
+
+
+				}
 		}
-		else if (collision.gameObject.tag == "Pacman") {
-			if (chaseMode) {
-
-			}
-			else {
-				// I'm thinking Lerp to ghost pen?
-				// Step 1: move to pen
-				// Step 2:
-				inPen = true;
-			}
-		}
-
-	}
-
 
 }

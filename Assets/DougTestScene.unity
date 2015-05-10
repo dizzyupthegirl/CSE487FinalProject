@@ -141,6 +141,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2040370, guid: 2e4c0cb251e3c402bbdf742910a782fb, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e4c0cb251e3c402bbdf742910a782fb, type: 2}
   m_RootGameObject: {fileID: 1183936725}
@@ -1416,7 +1420,7 @@ Camera:
     type: 2}
   m_PrefabInternal: {fileID: 321463108}
   m_GameObject: {fileID: 998232134}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: .19166474, g: .301966369, b: .474509805, a: 1}
