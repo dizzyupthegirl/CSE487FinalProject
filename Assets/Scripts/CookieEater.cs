@@ -141,7 +141,8 @@ public class CookieEater : MonoBehaviour {
 			ghosts2[i].transform.position=ghostPositions[i];
 			ghosts[i].transform.rotation=Quaternion.AngleAxis(0, Vector3.up);
 			ghosts3[i].transform.rotation=Quaternion.AngleAxis(0, Vector3.up);
-			ghosts[i].GetComponentInChildren<GhostMovement>().directionVector=new Vector3(0,0,1);
+			ghosts[i].GetComponentInChildren<GhostMovement>().GhostReturnedToPen();
+
 		}
 
 	

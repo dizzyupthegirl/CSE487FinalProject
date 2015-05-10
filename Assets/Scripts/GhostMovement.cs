@@ -57,7 +57,7 @@ public class GhostMovement : MonoBehaviour {
 				
 			}
 		}
-		print ("Can we eat ghost?" + pacMan.areWeEating());
+		//print ("Can we eat ghost?" + pacMan.areWeEating());
 		if (pacMan.areWeEating()) {
 			chaseMode=false;
 		}
@@ -78,17 +78,24 @@ public class GhostMovement : MonoBehaviour {
 		}
 		else if (collision.gameObject.tag == "PacMan") {
 			if (chaseMode) {
-				inPen=true;
+
+				print ("In pen is true Chase");
 			}
 			else {
 				// I'm thinking Lerp to ghost pen?
 				// Step 1: move to pen
 				// Step 2:
-				inPen = true;
+
 				print ("In pen is true");
 			}
 		}
 
+	}
+
+	public void GhostReturnedToPen() {
+		inPen = true;
+		directionVector = posZ;
+		transform.LookAt (transform.position + new Vector3 (0, 0, 2));
 	}
 
 	void OnTriggerEnter (Collider other) {
