@@ -7,6 +7,7 @@ public class CookieEater : MonoBehaviour {
 	public int smallCookieScore=20;
 	public int superCookieScore=100;
 	public AudioClip eatCookie;
+	public AudioClip lostLife;
 	static int score=0;
 	bool superPacMan=false;
 	Text scoreText, countDown, loseText;
@@ -21,6 +22,7 @@ public class CookieEater : MonoBehaviour {
 	Quaternion originalRotation;
 	GameObject[] ghosts;
 	Vector3[] ghostPositions;
+
 
 	void Awake () {
 		
@@ -49,6 +51,8 @@ public class CookieEater : MonoBehaviour {
 
 		}
 
+
+
 	}
 	
 
@@ -76,6 +80,7 @@ public class CookieEater : MonoBehaviour {
 				lifeTotal=lifeTotal-1;
 				print("Lives: "+lifeTotal);
 				StartCoroutine("backToStart");
+
 			
 			}
 			else if(!superPacMan && lifeTotal==0){
@@ -138,9 +143,13 @@ public class CookieEater : MonoBehaviour {
 
 
 	IEnumerator backToStart(){
-
+		for(int i=0; i<ghosts.Length; i++){
+			ghosts[i].GetComponent<GhostSoundController>().LoseLife();
+			
+		}
+		AudioSource.PlayClipAtPoint (lostLife, gameObject.transform.position);
 		Time.timeScale = .01f;
-		yield return new WaitForSeconds(5.0f * Time.timeScale);
+		yield return new WaitForSeconds(3.8f * Time.timeScale);
 		Time.timeScale = 1;
 	
 		transform.position = originalPosition;
@@ -154,12 +163,18 @@ public class CookieEater : MonoBehaviour {
 			ghosts[i].GetComponentInChildren<GhostMovement>().GhostReturnedToPen();
 
 		}
-
-	
+		for(int i=0; i<ghosts.Length; i++){
+			ghosts[i].GetComponent<GhostSoundController>().becomeNormal();
+			
+		}
+		
+		
 	}
 
 	public bool areWeEating(){
 		return ghostsEatable;
 	
 	}
+
+
 }

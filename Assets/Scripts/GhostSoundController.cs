@@ -3,22 +3,28 @@ using System.Collections;
 
 public class GhostSoundController : MonoBehaviour {
 
-	public AudioSource regularSound;
-	public AudioSource scaredSound;
+	public AudioSource source;
+	public AudioClip regular, scared;
 	// Use this for initialization
 	void Start () {
-		regularSound.Play ();
-		scaredSound.Stop ();
+		source.clip=regular;
+		source.Play ();
+
 	}
 
 	public void becomeScared() {
-		regularSound.Stop ();
-		scaredSound.Play ();
+		source.clip=scared;
+		source.Play ();
 	}
 
 	public void becomeNormal() {
-		scaredSound.Stop ();
-		regularSound.Play ();
+		source.clip=regular;
+		source.Play ();
+	}
+
+	public void LoseLife(){
+		source.Stop ();
+		print ("Sound off");
 	}
 	
 
