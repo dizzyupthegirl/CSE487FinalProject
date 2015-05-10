@@ -8,4 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
   - enabled: 1
+    path: Assets/Scenes/SelectAPacMan.unity
+  - enabled: 1
+    path: Assets/Scenes/TestLevelCreation.unity
+  - enabled: 0
     path: Assets/Scenes/Main.unity

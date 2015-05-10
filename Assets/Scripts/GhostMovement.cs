@@ -57,15 +57,7 @@ public class GhostMovement : MonoBehaviour {
 				
 			}
 		}
-<<<<<<< Updated upstream
-		//print ("Can we eat ghost?" + pacMan.areWeEating());
-=======
 
->>>>>>> Stashed changes
-		if (pacMan.areWeEating()) {
-			chaseMode=false;
-		}
-		
 		Vector3 targetPosition = target.position + target.up * height - target.forward * distance;
 		
 		//Quaternion targetRotation = Quaternion.LookRotation(target.position-transform.position, target.up);
