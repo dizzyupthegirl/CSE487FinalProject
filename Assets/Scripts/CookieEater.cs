@@ -9,13 +9,14 @@ public class CookieEater : MonoBehaviour {
 	public AudioClip eatCookie;
 	int score=0;
 	bool superPacMan=false;
-	Text scoreText, countDown;
+	Text scoreText, countDown, loseText;
 	float countTime=10.0f;
 	GameObject[] lives;
-	int lifeTotal=2;
+	int lifeTotal=3;
 	public Texture eatMe;
 	Texture[] ghostsMaterials;
 	bool ghostsEatable=false;
+	bool gameOver=false;
 	// Use this for initialization
 	void Start () {
 		scoreText = GameObject.Find ("ScoreText").GetComponentInChildren<Text> ();
@@ -41,12 +42,19 @@ public class CookieEater : MonoBehaviour {
 			Destroy (other.gameObject);
 
 		} else if (other.tag == "Ghost2") {
-			if(!superPacMan && lifeTotal!=-1){
+			if(superPacMan){
+			//MAKE GHOSTS GO BACK TO PEN
+				score+=300;
+			}
+			if(!superPacMan && lifeTotal!=0){
 
-				lives[lifeTotal].gameObject.SetActive(false);
+				lives[lifeTotal-1].gameObject.SetActive(false);
 				lifeTotal=lifeTotal-1;
 				print("Lives: "+lifeTotal);
 			
+			}
+			else if(!superPacMan && lifeTotal==0){
+				gameOver=true;
 			}
 		}
 
@@ -54,6 +62,12 @@ public class CookieEater : MonoBehaviour {
 
 
 	void FixedUpdate () {
+		if (gameOver) {
+			Time.timeScale=0;
+			loseText=GameObject.Find("WINNER TEXT").GetComponentInChildren<Text>();
+			loseText.text="GAME OVER :(";
+		
+		}
 		scoreText.text = "Score: " + score;
 		if (countTime <= 0.0)
 			superPacMan = false;
