@@ -7,12 +7,12 @@ public class CookieEater : MonoBehaviour {
 	public int smallCookieScore=20;
 	public int superCookieScore=100;
 	public AudioClip eatCookie;
-	int score=0;
+	static int score=0;
 	bool superPacMan=false;
 	Text scoreText, countDown, loseText;
 	float countTime=10.0f;
 	GameObject[] lives;
-	int lifeTotal=3;
+	static int lifeTotal=3;
 	public Texture eatMe;
 	Texture[] ghostsMaterials;
 	bool ghostsEatable=false;
@@ -22,6 +22,11 @@ public class CookieEater : MonoBehaviour {
 	GameObject[] ghosts;
 	Vector3[] ghostPositions;
 
+	void Awake () {
+		
+		DontDestroyOnLoad (transform.gameObject);
+	}
+
 	// Use this for initialization
 	void Start () {
 		scoreText = GameObject.Find ("ScoreText").GetComponentInChildren<Text> ();
@@ -29,21 +34,26 @@ public class CookieEater : MonoBehaviour {
 		countDown = GameObject.Find ("CountDown").GetComponentInChildren<Text> ();
 		countDown.text = "";
 		lives = GameObject.FindGameObjectsWithTag ("Lives");
-		print("Lives size: "+lives.Length);
+		if (lifeTotal != 3) {
+			for(int i=3; i>lifeTotal; i--){
+				lives[i-1].gameObject.SetActive(false);
+			}
+		
+		}
 		originalPosition = transform.position;
 		originalRotation = transform.rotation;
 		ghosts = GameObject.FindGameObjectsWithTag ("Ghost");
 		ghostPositions = new Vector3[ghosts.Length];
 		for (int i=0; i<ghosts.Length; i++) {
 			ghostPositions[i]=ghosts[i].transform.position;
-			print("GHosts names: "+ghosts[i].name);
+
 		}
 
 	}
 	
 
 	void OnTriggerEnter (Collider other) {
-		//print ("Tag Trigger Entered: " + other.tag);
+
 		if (other.tag == "Cookie") {
 			score += smallCookieScore;
 			AudioSource.PlayClipAtPoint (eatCookie, other.gameObject.transform.position);
@@ -137,7 +147,7 @@ public class CookieEater : MonoBehaviour {
 		GameObject[] ghosts2 = GameObject.FindGameObjectsWithTag ("Ghost");
 		GameObject[] ghosts3 = GameObject.FindGameObjectsWithTag ("Ghost2");
 		for (int i=0; i<ghosts.Length; i++) {
-			print (ghosts2[i].name);
+
 			ghosts2[i].transform.position=ghostPositions[i];
 			ghosts[i].transform.rotation=Quaternion.AngleAxis(0, Vector3.up);
 			ghosts3[i].transform.rotation=Quaternion.AngleAxis(0, Vector3.up);

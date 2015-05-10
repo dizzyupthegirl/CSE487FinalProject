@@ -25,7 +25,14 @@ function Awake () {
     var v = new Vector3 ();
     v.y = 1.0;
     var j_off = terrain.terrainData.size.z / 2.0;
+    try{
     chosenPacMan=gameObject.FindGameObjectWithTag("Selection").GetComponent("SelectPacMan").getChosen();
+    }
+    catch(err){
+    	print("SelectPacMan script not found");
+    }
+    
+    	
     for (var j = 0; j < map.length; j ++) {
         v.z = (terrain.terrainData.size.z - j - j_off - 1) * 2;
         var i_off = terrain.terrainData.size.x / 2.0;
@@ -35,23 +42,22 @@ function Awake () {
                 var inst = Instantiate (blockPrefab, v, Quaternion.identity);
                 inst.transform.parent = wallFolder.transform;
             } else if (map[j][i] == ".") {
-                var cookie=Instantiate (pelletPrefab, v, Quaternion.identity);
-                 cookie.transform.parent = cookieFolder.transform;
+               // var cookie=Instantiate (pelletPrefab, v, Quaternion.identity);
+                // cookie.transform.parent = cookieFolder.transform;
             } else if (map[j][i] == "O") {
                 var supercookie=Instantiate (superPrefab, v, Quaternion.identity);
                 supercookie.transform.parent=cookieFolder.transform;
-                var ints=Instantiate(intersectionPrefab, v, Quaternion.identity);
-                ints.transform.parent = cookieFolder.transform;
+                Instantiate(intersectionPrefab, v, Quaternion.identity);
+               
             }else if (map[j][i] == "I") {
-            	var intersection=Instantiate(intersectionPrefab, v, Quaternion.identity);
-            	intersection.transform.parent = cookieFolder.transform;
-            	var cookie2=Instantiate (pelletPrefab, v, Quaternion.identity);
-            	cookie2.transform.parent = cookieFolder.transform;
+            	Instantiate(intersectionPrefab, v, Quaternion.identity);
+        
+            	//var cookie2=Instantiate (pelletPrefab, v, Quaternion.identity);
+            	//cookie2.transform.parent = cookieFolder.transform;
             } else if (map[j][i] == "P") {
-            	var ghostPen=Instantiate(ghostPenIntersection, v, Quaternion.identity);
-            	ghostPen.transform.parent = cookieFolder.transform;
-            	var cookie3=Instantiate (pelletPrefab, v, Quaternion.identity);
-            	cookie3.transform.parent = cookieFolder.transform;
+            	Instantiate(ghostPenIntersection, v, Quaternion.identity);
+            	//var cookie3=Instantiate (pelletPrefab, v, Quaternion.identity);
+            	//cookie3.transform.parent = cookieFolder.transform;
             } else if (map[j][i] == "S") {
             if(chosenPacMan==1){
             	Instantiate (tophatpacman, v, Quaternion.identity);
