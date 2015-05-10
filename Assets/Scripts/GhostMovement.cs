@@ -21,6 +21,7 @@ public class GhostMovement : MonoBehaviour {
 	public Animation anim;
 	float timeElapsed;
 	Transform target; 
+	CookieEater pacMan;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +30,7 @@ public class GhostMovement : MonoBehaviour {
 		dead=false;
 		playingAnim = false;
 		inPen = true;
+		pacMan = GameObject.FindWithTag ("PacMan").GetComponent<CookieEater>();
 	}
 
 	void Awake() {
@@ -55,6 +57,10 @@ public class GhostMovement : MonoBehaviour {
 				
 			}
 		}
+		print ("Can we eat ghost?" + pacMan.areWeEating());
+		if (pacMan.areWeEating()) {
+			chaseMode=false;
+		}
 		
 		Vector3 targetPosition = target.position + target.up * height - target.forward * distance;
 		
@@ -66,18 +72,20 @@ public class GhostMovement : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision collision){
+		print ("Ghost collided with: " + collision.gameObject.name);
 		if (collision.gameObject.tag == "Wall") {
 			directionVector = Vector3.Reflect(directionVector, Vector3.up);
 		}
-		else if (collision.gameObject.tag == "Pacman") {
+		else if (collision.gameObject.tag == "PacMan") {
 			if (chaseMode) {
-
+				inPen=true;
 			}
 			else {
 				// I'm thinking Lerp to ghost pen?
 				// Step 1: move to pen
 				// Step 2:
 				inPen = true;
+				print ("In pen is true");
 			}
 		}
 

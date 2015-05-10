@@ -21,6 +21,7 @@ public class CookieEater : MonoBehaviour {
 	Quaternion originalRotation;
 	GameObject[] ghosts;
 	Vector3[] ghostPositions;
+
 	// Use this for initialization
 	void Start () {
 		scoreText = GameObject.Find ("ScoreText").GetComponentInChildren<Text> ();
@@ -42,7 +43,7 @@ public class CookieEater : MonoBehaviour {
 	
 
 	void OnTriggerEnter (Collider other) {
-		print ("Tag Trigger Entered: " + other.tag);
+		//print ("Tag Trigger Entered: " + other.tag);
 		if (other.tag == "Cookie") {
 			score += smallCookieScore;
 			AudioSource.PlayClipAtPoint (eatCookie, other.gameObject.transform.position);
@@ -122,6 +123,7 @@ public class CookieEater : MonoBehaviour {
 		}
 
 		ghostsEatable = false;
+
 	}
 
 
@@ -144,5 +146,9 @@ public class CookieEater : MonoBehaviour {
 
 	
 	}
+
+	public bool areWeEating(){
+		return ghostsEatable;
 	
+	}
 }
