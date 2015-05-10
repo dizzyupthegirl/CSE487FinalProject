@@ -17,6 +17,10 @@ public class CookieEater : MonoBehaviour {
 	Texture[] ghostsMaterials;
 	bool ghostsEatable=false;
 	bool gameOver=false;
+	Vector3 originalPosition;
+	Quaternion originalRotation;
+	GameObject[] ghosts;
+	Vector3[] ghostPositions;
 	// Use this for initialization
 	void Start () {
 		scoreText = GameObject.Find ("ScoreText").GetComponentInChildren<Text> ();
@@ -25,6 +29,15 @@ public class CookieEater : MonoBehaviour {
 		countDown.text = "";
 		lives = GameObject.FindGameObjectsWithTag ("Lives");
 		print("Lives size: "+lives.Length);
+		originalPosition = transform.position;
+		originalRotation = transform.rotation;
+		ghosts = GameObject.FindGameObjectsWithTag ("Ghost");
+		ghostPositions = new Vector3[ghosts.Length];
+		for (int i=0; i<ghosts.Length; i++) {
+			ghostPositions[i]=ghosts[i].transform.position;
+			print("GHosts names: "+ghosts[i].name);
+		}
+
 	}
 	
 
@@ -51,6 +64,7 @@ public class CookieEater : MonoBehaviour {
 				lives[lifeTotal-1].gameObject.SetActive(false);
 				lifeTotal=lifeTotal-1;
 				print("Lives: "+lifeTotal);
+				StartCoroutine("backToStart");
 			
 			}
 			else if(!superPacMan && lifeTotal==0){
@@ -110,4 +124,25 @@ public class CookieEater : MonoBehaviour {
 		ghostsEatable = false;
 	}
 
+
+	IEnumerator backToStart(){
+
+		Time.timeScale = .01f;
+		yield return new WaitForSeconds(5.0f * Time.timeScale);
+		Time.timeScale = 1;
+	
+		transform.position = originalPosition;
+		GameObject[] ghosts2 = GameObject.FindGameObjectsWithTag ("Ghost");
+		GameObject[] ghosts3 = GameObject.FindGameObjectsWithTag ("Ghost2");
+		for (int i=0; i<ghosts.Length; i++) {
+			print (ghosts2[i].name);
+			ghosts2[i].transform.position=ghostPositions[i];
+			ghosts[i].transform.rotation=Quaternion.AngleAxis(0, Vector3.up);
+			ghosts3[i].transform.rotation=Quaternion.AngleAxis(0, Vector3.up);
+			ghosts[i].GetComponentInChildren<GhostMovement>().directionVector=new Vector3(0,0,1);
+		}
+
+	
+	}
+	
 }
