@@ -435,6 +435,7 @@ GameObject:
   - 114: {fileID: 382623952}
   - 135: {fileID: 382623950}
   - 54: {fileID: 382623949}
+  - 114: {fileID: 382623951}
   m_Layer: 0
   m_Name: PacMan
   m_TagString: PacMan
@@ -487,6 +488,24 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .0111111114
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &382623951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 382623947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae1b70dc8281e405daab730471eae060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vectors:
+  - {x: 10, y: 201, z: 102}
+  - {x: 15, y: 201, z: 106}
+  - {x: 18, y: 201, z: 108}
+  - {x: 28, y: 201, z: 95}
+  - {x: 21, y: 201, z: 110}
+  shouldMove: 1
 --- !u!114 &382623952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -742,6 +761,7 @@ GameObject:
   - 114: {fileID: 659811678}
   - 135: {fileID: 659811676}
   - 54: {fileID: 659811675}
+  - 114: {fileID: 659811677}
   m_Layer: 0
   m_Name: PacMan
   m_TagString: PacMan
@@ -794,6 +814,24 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .0111111114
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &659811677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 659811673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae1b70dc8281e405daab730471eae060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vectors:
+  - {x: 10, y: 201, z: 98}
+  - {x: 5, y: 201, z: 85}
+  - {x: 18, y: 201, z: 100}
+  - {x: 15, y: 201, z: 95}
+  - {x: 17, y: 201, z: 84}
+  shouldMove: 1
 --- !u!114 &659811678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1720,7 +1758,7 @@ Transform:
   m_PrefabParentObject: {fileID: 440376, guid: 2e4c0cb251e3c402bbdf742910a782fb, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1784470180}
-  m_LocalRotation: {x: 0, y: 0, z: -.382683456, w: .923879504}
+  m_LocalRotation: {x: 0, y: 0, z: .382683277, w: -.923879623}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .999899983, y: 1, z: .999998987}
   m_Children:
@@ -1932,7 +1970,7 @@ Transform:
   m_PrefabParentObject: {fileID: 440380, guid: 2e4c0cb251e3c402bbdf742910a782fb, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1901394840}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: .923879445, z: 0, w: -.382683635}
   m_LocalPosition: {x: 12, y: 1, z: 0}
   m_LocalScale: {x: 220, y: 220, z: 220}
   m_Children:
@@ -1982,9 +2020,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae1b70dc8281e405daab730471eae060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionA: {x: 10, y: 201, z: 100}
-  positionB: {x: 20, y: 201, z: 50}
-  speed: 1
+  vectors:
+  - {x: 10, y: 201, z: 100}
+  - {x: 15, y: 201, z: 90}
+  - {x: 30, y: 201, z: 100}
+  - {x: 10, y: 201, z: 105}
+  - {x: 15, y: 201, z: 95}
+  shouldMove: 1
 --- !u!114 &1901394845
 MonoBehaviour:
   m_ObjectHideFlags: 0

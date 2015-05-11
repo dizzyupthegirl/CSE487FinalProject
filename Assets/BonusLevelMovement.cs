@@ -2,44 +2,46 @@
 using System.Collections;
 
 public class BonusLevelMovement : MonoBehaviour {
-	public Vector3 positionA;
-	public Vector3 positionB;
-	public float speed;
-	bool goToA, goToB;
+	public Vector3[] vectors = {new Vector3 (0, 201, -5), new Vector3(-20, 201, -5),
+		new Vector3 (-20, 201, -20), new Vector3 (20, 201, -20),new Vector3 (20,201,-5)};
+	private int headToIndex = 1;
+	private int curIndex = 0;
 	private float startTime;
-	private float journeyLength;
-
+	private float journeyLength = 0.0f;
+	private Vector3 dirVector;
+	public bool shouldMove = false;
 	// Use this for initialization
 	void Start () {
-		//this.transform.position = positionA;
-		goToB = true;
-		goToA=false;
+		transform.position = new Vector3 (0, 1, -5);
 		startTime = Time.time;
-		journeyLength = Vector3.Distance(positionA, positionB);
+		journeyLength = Vector3.Distance (vectors[curIndex], vectors[headToIndex]);
+		dirVector = vectors[curIndex] - vectors[headToIndex];
+		dirVector.Normalize ();
+		transform.right = dirVector;
+		//transform.rotation=Quaternion.AngleAxis(180, Vector3.up);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		if (goToB && transform.position != positionB) {
-			float distCovered = (Time.time - startTime) * speed;
+		if (shouldMove) {
+			float distCovered = (Time.time - startTime) * 5.0f;
 			float fracJourney = distCovered / journeyLength;
-			transform.position = Vector3.Lerp (this.transform.position, positionB, fracJourney);
-		} else if (goToB && transform.position == positionB) {
-			goToA=true;
-			goToB=false;
-			startTime = Time.time;
-		}
 
-		if (goToA && transform.position!=positionA) {
-			float distCovered = (Time.time - startTime) * speed;
-			float fracJourney = distCovered / journeyLength;
-			transform.position = Vector3.Lerp (this.transform.position, positionA, fracJourney);
-		}else if (goToA && transform.position == positionA) {
-			goToB=true;
-			goToA=false;
-			startTime = Time.time;
+			transform.right = Vector3.Slerp (transform.right,
+			                                   dirVector, Time.deltaTime * 5.0f);
+			transform.position = Vector3.Lerp (vectors [curIndex], vectors [headToIndex], fracJourney);
+			if (fracJourney >= 1) {
+				curIndex = headToIndex;
+				headToIndex = (headToIndex + 1) % vectors.Length;
+				startTime = Time.time;
+				journeyLength = Vector3.Distance (vectors [curIndex], vectors [headToIndex]);
+				dirVector = vectors [curIndex] - vectors [headToIndex];
+				dirVector.Normalize ();
+			}
 		}
-
+	}
+	
+	public void OnToggleClick() {
+		shouldMove = !shouldMove;
 	}
 }
