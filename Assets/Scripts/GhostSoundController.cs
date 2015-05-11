@@ -24,7 +24,7 @@ public class GhostSoundController : MonoBehaviour {
 
 	public void LoseLife(){
 		source.Stop ();
-		print ("Sound off");
+
 	}
 	
 
