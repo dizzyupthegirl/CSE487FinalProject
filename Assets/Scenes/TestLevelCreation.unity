@@ -826,7 +826,7 @@ MonoBehaviour:
   m_Color: {r: .854901969, g: .952941179, b: .988235295, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -836,7 +836,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: WOO HOO YOU WIN! Winner WInner chicken dinner!
+  m_Text: YOU WON!
 --- !u!222 &1275565877
 CanvasRenderer:
   m_ObjectHideFlags: 0

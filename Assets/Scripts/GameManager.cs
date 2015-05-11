@@ -21,19 +21,21 @@ public class GameManager : MonoBehaviour {
 	}
 
 	//Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		numCookies = cookieFolder.transform.childCount;
 
 		if (numCookies == 0 && levelNum==2) {
-			winnerText.text="WOO HOO YOU WIN! " +
-				"WINNER WINNER CHICKEN DINNER";
+			winnerText.text="YOU WON!";
 			StartCoroutine("waitAndLoadThanks");
 		
 		}
 		if (numCookies == 0 && levelNum==1) {
-			winnerText.text="Here comes the next level!";
+//			winnerText.text="Here comes the next level!";
+//
+//			StartCoroutine("waitAndLoad2");
 			levelNum++;
-			StartCoroutine("waitAndLoad2");
+			Application.LoadLevel(3);
+
 
 
 		}
@@ -53,6 +55,7 @@ public class GameManager : MonoBehaviour {
 		yield return new WaitForSeconds(5.0f * Time.timeScale);
 		Time.timeScale = 1;
 		Application.LoadLevel(3);
+		levelNum++;
 	
 	}
 
