@@ -42,8 +42,8 @@ function Awake () {
                 var inst = Instantiate (blockPrefab, v, Quaternion.identity);
                 inst.transform.parent = wallFolder.transform;
             } else if (map[j][i] == ".") {
-               // var cookie=Instantiate (pelletPrefab, v, Quaternion.identity);
-                // cookie.transform.parent = cookieFolder.transform;
+                var cookie=Instantiate (pelletPrefab, v, Quaternion.identity);
+                 cookie.transform.parent = cookieFolder.transform;
             } else if (map[j][i] == "O") {
                 var supercookie=Instantiate (superPrefab, v, Quaternion.identity);
                 supercookie.transform.parent=cookieFolder.transform;
@@ -52,12 +52,12 @@ function Awake () {
             }else if (map[j][i] == "I") {
             	Instantiate(intersectionPrefab, v, Quaternion.identity);
         
-            	//var cookie2=Instantiate (pelletPrefab, v, Quaternion.identity);
-            	//cookie2.transform.parent = cookieFolder.transform;
+            	var cookie2=Instantiate (pelletPrefab, v, Quaternion.identity);
+            	cookie2.transform.parent = cookieFolder.transform;
             } else if (map[j][i] == "P") {
             	Instantiate(ghostPenIntersection, v, Quaternion.identity);
-            	//var cookie3=Instantiate (pelletPrefab, v, Quaternion.identity);
-            	//cookie3.transform.parent = cookieFolder.transform;
+            	var cookie3=Instantiate (pelletPrefab, v, Quaternion.identity);
+            	cookie3.transform.parent = cookieFolder.transform;
             } else if (map[j][i] == "S") {
             if(chosenPacMan==1){
             	Instantiate (tophatpacman, v, Quaternion.identity);
