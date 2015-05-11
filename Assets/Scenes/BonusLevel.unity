@@ -73,7 +73,6 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
-    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1 &24288341
 GameObject:
@@ -665,7 +664,7 @@ EllipsoidParticleEmitter:
   m_Enabled: 1
   m_Emit: 1
   minSize: .00999999978
-  maxSize: .00999999978
+  maxSize: .0299999993
   minEnergy: 1
   maxEnergy: 1
   minEmission: 10000
@@ -725,6 +724,10 @@ MonoBehaviour:
   superCookie: {fileID: 155272, guid: acb4e21aa35a643c29b766134d31d07f, type: 2}
   player: {fileID: 140372, guid: 2e4c0cb251e3c402bbdf742910a782fb, type: 2}
   enemy: {fileID: 122784, guid: 2d6e552ccd6ceb948b649c142dd5fef7, type: 2}
+  blueGhost: {fileID: 130626, guid: a3dad6ee53abf45ff9efb6ae19b82bbc, type: 2}
+  redGhost: {fileID: 176162, guid: 8f7771f37a8b242209f375f96f336736, type: 2}
+  greenGhost: {fileID: 175330, guid: 798cd9eb4359d425884d4f564667b178, type: 2}
+  orangeGhost: {fileID: 142600, guid: 008b56ac789b04ed1a4e9812172ab305, type: 2}
 --- !u!4 &673316453
 Transform:
   m_ObjectHideFlags: 0

@@ -138,7 +138,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 422784}
   - 95: {fileID: 9522784}
-  - 114: {fileID: 11422782}
   - 135: {fileID: 13522784}
   - 54: {fileID: 5422784}
   - 114: {fileID: 11422784}
@@ -461,22 +460,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11422782
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 122784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bd5c3e4ec06c4d03b034190f1e3771a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  smallCookieScore: 20
-  superCookieScore: 100
-  eatCookie: {fileID: 8300000, guid: 5ca77bdb114904066a689ca592a0ac8c, type: 3}
-  lostLife: {fileID: 8300000, guid: 79761f078708b4f3aa828a15e2716893, type: 3}
-  eatMe: {fileID: 2800000, guid: 02d07ce9447a24a3993725dc8dca96e2, type: 3}
 --- !u!114 &11422784
 MonoBehaviour:
   m_ObjectHideFlags: 1
