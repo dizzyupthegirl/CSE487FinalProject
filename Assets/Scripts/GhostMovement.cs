@@ -40,7 +40,7 @@ public class GhostMovement : MonoBehaviour {
 
 	public void FixedUpdate () {
 		if (targetObject == null) {
-			targetObject = GameObject.Find("First Person Controller(Clone)");
+			targetObject = GameObject.FindGameObjectWithTag("Player");
 		}
 		timeElapsed = timeElapsed + Time.deltaTime;
 		
