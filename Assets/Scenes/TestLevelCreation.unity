@@ -33,13 +33,16 @@ LevelGameManager:
 LightmapSettings:
   m_ObjectHideFlags: 0
   m_LightProbes: {fileID: 0}
-  m_Lightmaps: []
+  m_Lightmaps:
+  - m_Lightmap: {fileID: 2800000, guid: 47cfe539025124579a4de631422b147d, type: 3}
+    m_IndirectLightmap: {fileID: 2800000, guid: 21f1b54cda0f1473fb516338659cca81,
+      type: 3}
   m_LightmapsMode: 1
   m_BakedColorSpace: 0
   m_UseDualLightmapsInForward: 0
   m_LightmapEditorSettings:
     m_Resolution: 50
-    m_LastUsedResolution: 0
+    m_LastUsedResolution: 50
     m_TextureWidth: 1024
     m_TextureHeight: 1024
     m_BounceBoost: 1
@@ -751,7 +754,7 @@ Light:
     m_SoftnessFade: 1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_ActuallyLightmapped: 0
+  m_ActuallyLightmapped: 1
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
@@ -1182,7 +1185,7 @@ MonoBehaviour:
   m_SplatMapDistance: 1000
   m_HeightmapMaximumLOD: 0
   m_CastShadows: 1
-  m_LightmapIndex: -1
+  m_LightmapIndex: 0
   m_LightmapSize: 1024
   m_DrawTreesAndFoliage: 1
   m_CollectDetailPatches: 1
