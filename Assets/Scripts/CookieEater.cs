@@ -11,7 +11,7 @@ public class CookieEater : MonoBehaviour {
 	static int score=0;
 	bool superPacMan=false;
 	Text scoreText, countDown, loseText;
-	float countTime=10.0f;
+	float countTime=8.0f;
 	GameObject[] lives;
 	static int lifeTotal=3;
 	public Texture eatMe;
@@ -112,7 +112,7 @@ public class CookieEater : MonoBehaviour {
 			countDown.text="EAT GHOSTS FOR: "+countTime;
 		}
 		else{
-			countTime=10.0f;
+			countTime=8.0f;
 			countDown.text="";
 			if(ghostsEatable)
 				FixGhosts();
@@ -122,24 +122,32 @@ public class CookieEater : MonoBehaviour {
 
 	void EatableGhosts(){
 
-
-		GameObject[] ghosts = GameObject.FindGameObjectsWithTag ("SlimeModel");
-		ghostsMaterials=new Texture[ghosts.Length];
-		print ("All Ghosts: " + ghosts.Length);
 		for (int i=0; i<ghosts.Length; i++) {
-			ghostsMaterials[i]=ghosts[i].renderer.material.mainTexture;
-			ghosts[i].renderer.material.mainTexture=eatMe;
+			
+			ghosts[i].GetComponent<GhostSoundController>().becomeScared();
+		}
+		GameObject[] ghostsS = GameObject.FindGameObjectsWithTag ("SlimeModel");
+		ghostsMaterials=new Texture[ghostsS.Length];
+		print ("All Ghosts: " + ghosts.Length);
+		for (int i=0; i<ghostsS.Length; i++) {
+			ghostsMaterials[i]=ghostsS[i].renderer.material.mainTexture;
+			ghostsS[i].renderer.material.mainTexture=eatMe;
 
 		}
 		ghostsEatable = true;
 	}
 
 	void FixGhosts() {
-		GameObject[] ghosts = GameObject.FindGameObjectsWithTag ("SlimeModel");
 
 		for (int i=0; i<ghosts.Length; i++) {
+			
+			ghosts[i].GetComponent<GhostSoundController>().becomeNormal();
+		}
+		GameObject[] ghostsS = GameObject.FindGameObjectsWithTag ("SlimeModel");
 
-			ghosts[i].renderer.material.mainTexture=ghostsMaterials[i];
+		for (int i=0; i<ghostsS.Length; i++) {
+
+			ghostsS[i].renderer.material.mainTexture=ghostsMaterials[i];
 			
 		}
 

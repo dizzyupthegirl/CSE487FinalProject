@@ -12,12 +12,14 @@ public class GhostSoundController : MonoBehaviour {
 
 	}
 
-	public void becomeScared() {
+	public void becomeScared() {;
+		source.Stop ();
 		source.clip=scared;
 		source.Play ();
 	}
 
 	public void becomeNormal() {
+		source.Stop ();
 		source.clip=regular;
 		source.Play ();
 	}
