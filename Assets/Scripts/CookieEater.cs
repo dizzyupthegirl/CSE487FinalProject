@@ -93,9 +93,15 @@ public class CookieEater : MonoBehaviour {
 
 	void FixedUpdate () {
 		if (gameOver) {
-			Time.timeScale=0;
+			for(int i=0; i<ghosts.Length; i++){
+				ghosts[i].GetComponent<GhostSoundController>().LoseLife();
+				
+			}
+			AudioSource.PlayClipAtPoint (lostLife, gameObject.transform.position);
 			loseText=GameObject.Find("WINNER TEXT").GetComponentInChildren<Text>();
 			loseText.text="GAME OVER :(";
+			StartCoroutine("waitAndLoadThanks");
+
 		
 		}
 		scoreText.text = "Score: " + score;
@@ -176,5 +182,12 @@ public class CookieEater : MonoBehaviour {
 	
 	}
 
+	IEnumerator waitAndLoadThanks(){
+		Time.timeScale = .01f;
+		yield return new WaitForSeconds(5.0f * Time.timeScale);
+		Time.timeScale = 1;
+		Application.LoadLevel(4);
+		
+	}
 
 }

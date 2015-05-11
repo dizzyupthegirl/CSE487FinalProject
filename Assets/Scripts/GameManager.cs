@@ -27,13 +27,14 @@ public class GameManager : MonoBehaviour {
 		if (numCookies == 0 && levelNum==2) {
 			winnerText.text="WOO HOO YOU WIN! " +
 				"WINNER WINNER CHICKEN DINNER";
+			StartCoroutine("waitAndLoadThanks");
 		
 		}
 		if (numCookies == 0 && levelNum==1) {
 			winnerText.text="Here comes the next level!";
 			levelNum++;
-			StartCoroutine("wait");
-			Application.LoadLevel(3);
+			StartCoroutine("waitAndLoad2");
+
 
 		}
 
@@ -47,11 +48,20 @@ public class GameManager : MonoBehaviour {
 		PlayerPrefs.Save();
 	}
 
-	IEnumerator wait(){
+	IEnumerator waitAndLoad2(){
 		Time.timeScale = .01f;
 		yield return new WaitForSeconds(5.0f * Time.timeScale);
 		Time.timeScale = 1;
+		Application.LoadLevel(3);
 	
+	}
+
+	IEnumerator waitAndLoadThanks(){
+		Time.timeScale = .01f;
+		yield return new WaitForSeconds(5.0f * Time.timeScale);
+		Time.timeScale = 1;
+		Application.LoadLevel(4);
+		
 	}
 
 
