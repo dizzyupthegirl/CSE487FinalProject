@@ -75,14 +75,14 @@ public class GhostMovement : MonoBehaviour {
 		else if (collision.gameObject.tag == "PacMan") {
 			if (chaseMode) {
 
-				print ("In pen is true Chase");
+
 			}
 			else {
 				// I'm thinking Lerp to ghost pen?
 				// Step 1: move to pen
 				// Step 2:
 
-				print ("In pen is true");
+
 			}
 		}
 
@@ -95,7 +95,7 @@ public class GhostMovement : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider other) {
-		print ("Ghost triggered: " + other.tag);
+
 		if (other.tag=="Intersection") {
 			Vector3 trig = other.gameObject.transform.position;
 			transform.position = new Vector3(trig.x, trig.y, trig.z);

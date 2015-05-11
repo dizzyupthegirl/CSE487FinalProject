@@ -78,7 +78,7 @@ public class CookieEater : MonoBehaviour {
 
 				lives[lifeTotal-1].gameObject.SetActive(false);
 				lifeTotal=lifeTotal-1;
-				print("Lives: "+lifeTotal);
+
 				StartCoroutine("backToStart");
 
 			
