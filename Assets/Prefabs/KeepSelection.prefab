@@ -43,7 +43,6 @@ MonoBehaviour:
   tongueGuy: {fileID: 0}
   pacMan: {fileID: 0}
   letsGoButton: {fileID: 0}
-  chosenPacMan: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
