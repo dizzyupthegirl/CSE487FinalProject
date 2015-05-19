@@ -71,8 +71,27 @@ public class CookieEater : MonoBehaviour {
 
 		} else if (other.tag == "Ghost2") {
 			if(superPacMan){
-			//MAKE GHOSTS GO BACK TO PEN
-				score+=300;
+//				score+=300;
+				for (int i=0; i<ghosts.Length; i++) {
+					
+					if (ghosts[i] == other.gameObject.transform.parent.gameObject) {
+						GameObject[] ghostsS = GameObject.FindGameObjectsWithTag ("SlimeModel");
+						// Has the ghost been eaten before???
+						if(ghostsS[i].renderer.material.mainTexture == eatMe) {
+							score += 300;
+							ghostsS[i].renderer.material.mainTexture=ghostsMaterials[i];
+							other.gameObject.transform.parent.gameObject.transform.position= ghostPositions[0];
+							//other.gameObject.transform.rotation=Quaternion.AngleAxis(0, Vector3.up);
+							other.gameObject.transform.parent.gameObject.GetComponent<GhostMovement>().GhostReturnedToPen();
+							other.gameObject.transform.parent.gameObject.GetComponent<GhostSoundController>().becomeNormal();			
+						}
+						else {
+							// Ghost has already been eaten, lose life.
+							StartCoroutine("backToStart");
+						}
+					}
+				}
+				
 			}
 			if(!superPacMan && lifeTotal!=0){
 
@@ -128,7 +147,6 @@ public class CookieEater : MonoBehaviour {
 		}
 		GameObject[] ghostsS = GameObject.FindGameObjectsWithTag ("SlimeModel");
 		ghostsMaterials=new Texture[ghostsS.Length];
-		print ("All Ghosts: " + ghosts.Length);
 		for (int i=0; i<ghostsS.Length; i++) {
 			ghostsMaterials[i]=ghostsS[i].renderer.material.mainTexture;
 			ghostsS[i].renderer.material.mainTexture=eatMe;
@@ -169,6 +187,7 @@ public class CookieEater : MonoBehaviour {
 		transform.position = originalPosition;
 		GameObject[] ghosts2 = GameObject.FindGameObjectsWithTag ("Ghost");
 		GameObject[] ghosts3 = GameObject.FindGameObjectsWithTag ("Ghost2");
+		FixGhosts ();
 		for (int i=0; i<ghosts.Length; i++) {
 
 			ghosts2[i].transform.position=ghostPositions[i];
