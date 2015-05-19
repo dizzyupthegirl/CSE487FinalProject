@@ -4,7 +4,7 @@ using System.Collections;
 public class GhostSoundController : MonoBehaviour {
 
 	public AudioSource source;
-	public AudioClip regular, scared;
+	public AudioClip regular, scared, eaten;
 	// Use this for initialization
 	void Start () {
 		source.clip=regular;
@@ -28,6 +28,12 @@ public class GhostSoundController : MonoBehaviour {
 		source.Stop ();
 
 	}
-	
+
+	public void Eaten() {
+		source.Stop ();
+		source.clip=eaten;
+		source.Play ();
+	}
+
 
 }

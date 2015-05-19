@@ -71,7 +71,6 @@ public class CookieEater : MonoBehaviour {
 
 		} else if (other.tag == "Ghost2") {
 			if(superPacMan){
-//				score+=300;
 				for (int i=0; i<ghosts.Length; i++) {
 					
 					if (ghosts[i] == other.gameObject.transform.parent.gameObject) {
@@ -83,7 +82,7 @@ public class CookieEater : MonoBehaviour {
 							other.gameObject.transform.parent.gameObject.transform.position= ghostPositions[0];
 							//other.gameObject.transform.rotation=Quaternion.AngleAxis(0, Vector3.up);
 							other.gameObject.transform.parent.gameObject.GetComponent<GhostMovement>().GhostReturnedToPen();
-							other.gameObject.transform.parent.gameObject.GetComponent<GhostSoundController>().becomeNormal();			
+							other.gameObject.transform.parent.gameObject.GetComponent<GhostSoundController>().Eaten();			
 						}
 						else {
 							// Ghost has already been eaten, lose life.

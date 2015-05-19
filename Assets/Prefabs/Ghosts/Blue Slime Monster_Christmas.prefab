@@ -384,6 +384,7 @@ MonoBehaviour:
   source: {fileID: 8215110}
   regular: {fileID: 8300000, guid: 8c0ba004a3e274a62a0b70bb4749b94e, type: 3}
   scared: {fileID: 8300000, guid: dab8527d317e94e9ca0fc57a32b33d16, type: 3}
+  eaten: {fileID: 8300000, guid: 95327d304176e422799f23e0886e88c5, type: 3}
 --- !u!135 &13515110
 SphereCollider:
   m_ObjectHideFlags: 1
