@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class CameraSwitcher : MonoBehaviour {
-	public GameObject fpCam;
-	public GameObject wholeCam;
+	public Camera fpCam;
+	public Camera wholeCam;
 	// Use this for initialization
 	void Start () {
 	
@@ -12,14 +12,14 @@ public class CameraSwitcher : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Q)) {
-			fpCam.SetActive(true);
-			wholeCam.SetActive(false);
+			fpCam.enabled=true;
+			wholeCam.enabled = false;
 			
 		}
 		
 		if(Input.GetKeyDown(KeyCode.E)){
-			fpCam.SetActive(false);
-			wholeCam.SetActive(true);
+			fpCam.enabled=false;
+			wholeCam.enabled = true;
 		}
 	}
 }

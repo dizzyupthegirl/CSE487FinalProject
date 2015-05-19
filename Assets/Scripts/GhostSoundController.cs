@@ -21,6 +21,7 @@ public class GhostSoundController : MonoBehaviour {
 	public void becomeNormal() {
 		source.Stop ();
 		source.clip=regular;
+		source.loop = true;
 		source.Play ();
 	}
 
@@ -32,6 +33,7 @@ public class GhostSoundController : MonoBehaviour {
 	public void Eaten() {
 		source.Stop ();
 		source.clip=eaten;
+		source.loop = false;
 		source.Play ();
 	}
 

@@ -72,7 +72,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &197964
 GameObject:
   m_ObjectHideFlags: 1
@@ -398,7 +398,7 @@ Camera:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197962}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: .19166474, g: .301966369, b: .474509805, a: 1}
@@ -619,7 +619,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197978}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!82 &8297956
 AudioSource:
   m_ObjectHideFlags: 1
@@ -780,8 +780,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6cd737229df942a4acbcb68b86084a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fpCam: {fileID: 197962}
-  wholeCam: {fileID: 197978}
+  fpCam: {fileID: 2097956}
+  wholeCam: {fileID: 2097958}
 --- !u!114 &11497966
 MonoBehaviour:
   m_ObjectHideFlags: 1
